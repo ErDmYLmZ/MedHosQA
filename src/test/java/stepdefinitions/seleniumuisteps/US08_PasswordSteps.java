@@ -14,7 +14,7 @@ public class US08_PasswordSteps {
 
     @Given("user is on the registration page")
     public void user_is_on_the_registration_page() {
-        Driver.getDriver().get(ConfigReader.getProperty("registerAppUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("app_url_register"));
     }
     @When("user enters the password as {string}")
     public void user_enters_the_password_as(String firstPassword) {

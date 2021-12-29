@@ -1,1 +1,194 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: null value in entry: url\u003dnull\n\tat com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)\n\tat com.google.common.collect.SingletonImmutableBiMap.\u003cinit\u003e(SingletonImmutableBiMap.java:42)\n\tat com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)\n\tat com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\n\tat stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_is_on_the_registration_page(US08_PasswordSteps.java:17)\n\tat ✽.user is on the registration page(file:///Users/erdem/IdeaProjects/medunnastartupdemo/./src/test/resources/features/UIFeatures/us08_Password.feature:4)\n",
+              "duration": 3605306000,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-29T21:28:27.481Z",
+        "line": 12,
+        "name": "Verify password confirmation",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-password-confirmation;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 802000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user enters the password as \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 767000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user confirms the new password \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_confirms_the_new_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 527000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Verify error message",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.verifyNoErrorMessage()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: null value in entry: url\u003dnull\n\tat com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)\n\tat com.google.common.collect.SingletonImmutableBiMap.\u003cinit\u003e(SingletonImmutableBiMap.java:42)\n\tat com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)\n\tat com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\n\tat stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_is_on_the_registration_page(US08_PasswordSteps.java:17)\n\tat ✽.user is on the registration page(file:///Users/erdem/IdeaProjects/medunnastartupdemo/./src/test/resources/features/UIFeatures/us08_Password.feature:4)\n",
+              "duration": 224575000,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-29T21:28:31.260Z",
+        "line": 13,
+        "name": "Verify password confirmation",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-password-confirmation;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 347000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user enters the password as \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 276000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user confirms the new password \"Ab12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_confirms_the_new_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1393000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Verify error message",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.verifyNoErrorMessage()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          }
+        ]
+      }
+    ],
+    "name": "US_008 Password segment on Homepage should be editable",
+    "description": "",
+    "id": "us-008-password-segment-on-homepage-should-be-editable",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UIFeatures/us08_Password.feature",
+    "tags": [
+      {
+        "name": "@Us008",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,3 +1,4 @@
+@Us008
 Feature: US_008 Password segment on Homepage should be editable
   Background: Navigate to the Homepage
     Given user is on the registration page
@@ -8,5 +9,5 @@ Feature: US_008 Password segment on Homepage should be editable
     And Verify error message
       Examples:
       |firstpassword|secondpassword|
-      |Ab12345.     |Ab12345.      |
+#      |Ab12345.     |Ab12345.      |
       |Ab12345.     |Ab12345       |

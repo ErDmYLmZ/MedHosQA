@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.026"/>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="4.265">
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify password confirmation" time="3.729">
+        <failure message="null value in entry: url=null" type="java.lang.NullPointerException">
+            <![CDATA[Given user is on the registration page......................................failed
+When user enters the password as "Ab12345.".................................skipped
+And user confirms the new password "Ab12345."...............................skipped
+And Verify error message....................................................skipped
+
+StackTrace:
+java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_is_on_the_registration_page(US08_PasswordSteps.java:17)
+	at ✽.user is on the registration page(file:///Users/erdem/IdeaProjects/medunnastartupdemo/./src/test/resources/features/UIFeatures/us08_Password.feature:4)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify password confirmation 2" time="0.232">
+        <failure message="null value in entry: url=null" type="java.lang.NullPointerException">
+            <![CDATA[Given user is on the registration page......................................failed
+When user enters the password as "Ab12345.".................................skipped
+And user confirms the new password "Ab12345"................................skipped
+And Verify error message....................................................skipped
+
+StackTrace:
+java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_is_on_the_registration_page(US08_PasswordSteps.java:17)
+	at ✽.user is on the registration page(file:///Users/erdem/IdeaProjects/medunnastartupdemo/./src/test/resources/features/UIFeatures/us08_Password.feature:4)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
