@@ -37,4 +37,12 @@ public class RegistrationPage {
 
     @FindBy(xpath = "//*[text()='Registration saved!']")
     public WebElement successMessageToastContainer;
+
+
+
+
+
+
+    @FindBy(xpath = "(//li[@class='point'])[5]")
+    public WebElement strengthBar;
 }
