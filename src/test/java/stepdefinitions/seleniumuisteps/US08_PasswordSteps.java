@@ -1,13 +1,19 @@
 package stepdefinitions.seleniumuisteps;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import pages.CommonPageElements;
 import pages.RegistrationPage;
 import utilities.*;
 
+import static org.junit.Assert.*;
+
 public class US08_PasswordSteps {
     RegistrationPage registrationPage = new RegistrationPage();
+    CommonPageElements cp = new CommonPageElements();
+
 
 //    @Given("user is on the registration page")
 //    public void user_is_on_the_registration_page() {
@@ -40,7 +46,7 @@ public class US08_PasswordSteps {
         } else {
             String attributeOfPasswordBox = registrationPage.newPasswordTextbox.getAttribute("class");
             ReusableMethods.waitFor(1);
-            Assert.assertTrue(attributeOfPasswordBox.contains("invalid"));
+            assertTrue(attributeOfPasswordBox.contains("invalid"));
             System.out.println(attributeOfPasswordBox);
 
 
@@ -59,27 +65,27 @@ public class US08_PasswordSteps {
             case "AA12345.":
                 ReusableMethods.waitFor(2);
                 System.out.println(barColor);
-                Assert.assertTrue(barColor.contains("221"));
+                assertTrue(barColor.contains("221"));
             break;
             case "ab12345.":
                 ReusableMethods.waitFor(2);
                 System.out.println(barColor);
-                Assert.assertTrue(barColor.contains("221"));
+                assertTrue(barColor.contains("221"));
                 break;
             case "Abbbbbb.":
                 ReusableMethods.waitFor(2);
                 System.out.println(barColor);
-                Assert.assertTrue(barColor.contains("221"));
+                assertTrue(barColor.contains("221"));
                 break;
             case "Ab123455":
                 ReusableMethods.waitFor(2);
                 System.out.println(barColor);
-                Assert.assertTrue(barColor.contains("221"));
+                assertTrue(barColor.contains("221"));
                 break;
             case "Ab123.":
                 ReusableMethods.waitFor(2);
                 System.out.println(barColor);
-                Assert.assertTrue(barColor.contains("221"));
+                assertTrue(barColor.contains("221"));
                 break;
         }
 //        if (firstpassword.equals("Ab12345.")) {
@@ -97,8 +103,40 @@ public class US08_PasswordSteps {
 //        }
     }
 
-    @When("user reads all registrant datam")
-    public void userReadsAllRegistrantDatam() throws Exception {
+    @Then("user navigates to password")
+    public void userNavigatesToPassword() {
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.Passwordbutton);
+    }
 
+    @And("User enters current password as {string}")
+    public void userEntersCurrentPasswordAs(String password) {
+        Driver.waitAndSendText(cp.currentPasswordBox, password);
+
+    }
+
+    @And("User enters New password as the same {string}")
+    public void userEntersNewPasswordAsTheSame(String password) {
+        Driver.waitAndSendText(cp.newPasswordBox, password);
+
+    }
+
+    @And("User enters New password confirmation as the same {string}")
+    public void userEntersNewPasswordConfirmationAsTheSame(String password) {
+        Driver.waitAndSendText(cp.confirmPasswordBox, password);
+    }
+
+    @And("User clicks on Save button")
+    public void userClicksOnSaveButton() {
+        Driver.waitAndClick(cp.saveButton);
+
+    }
+
+    @Then("verify the error message is displayed")
+    public void verifyTheErrorMessageIsDisplayed() {
+        Driver.waitAndClick(cp.ToastifyMessage);
+        String ToastifyMessage =cp.ToastifyMessage.getText();
+        assertNotEquals("Old password should not be accepted",ToastifyMessage,"Password changed!");
+                System.out.println(ToastifyMessage);
     }
 }

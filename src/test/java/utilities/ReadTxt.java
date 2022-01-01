@@ -22,6 +22,7 @@ public class ReadTxt {
                     registrant.setActivated(Boolean.parseBoolean(line.split(",")[5]));
                 if(line.split(",")[6] != null)
                     registrant.setCreatedDate(line.split(",")[6]);
+                line = br.readLine();
                 all.add(registrant);
             }
         }catch (Exception e){
@@ -36,6 +37,7 @@ public class ReadTxt {
             while (line != null){
                 // String ssn = line.split(",")[0]; sadece ssn veriyor
                 ssnList.add(line.split(",")[0]);
+                line = br.readLine();
             }
         }catch (Exception e){
             e.printStackTrace();

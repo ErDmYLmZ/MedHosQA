@@ -1,0 +1,1100 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 453370000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:06.309Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6930861000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Verify password confirmation",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-password-confirmation;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 767000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 393986000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters the first password as \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1151325000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user confirms the same password \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_confirms_the_same_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1031982000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Verify error message \"Ab12345.\" and \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.verifyErrorMessage(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 286833000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:16.422Z",
+        "before": [
+          {
+            "result": {
+              "duration": 461195000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify password confirmation",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-password-confirmation;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 407000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 341296000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters the first password as \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1147951000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user confirms the same password \"Ab12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_confirms_the_same_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1021123000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Verify error message \"Ab12345.\" and \"Ab12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Ab12345\"",
+                  "offset": 36
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.verifyErrorMessage(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 204761000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:19.699Z",
+        "before": [
+          {
+            "result": {
+              "duration": 414373000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Verify strength bar is fully green",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-strength-bar-is-fully-green;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 410000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 342090000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the first password as \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2025785000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user enters \"Ab12345.\" and verify the strengthBar is fully green",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersAndVerifyTheStrengthBarIsFullyGreen(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 176770000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:22.703Z",
+        "before": [
+          {
+            "result": {
+              "duration": 422474000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Verify strength bar is fully green",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-strength-bar-is-fully-green;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 347000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 327236000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the first password as \"AA12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AA12345.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2017451000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user enters \"AA12345.\" and verify the strengthBar is fully green",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AA12345.\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersAndVerifyTheStrengthBarIsFullyGreen(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 178991000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:25.661Z",
+        "before": [
+          {
+            "result": {
+              "duration": 414439000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Verify strength bar is fully green",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-strength-bar-is-fully-green;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 310000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 330212000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the first password as \"ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ab12345.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2021890000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user enters \"ab12345.\" and verify the strengthBar is fully green",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ab12345.\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersAndVerifyTheStrengthBarIsFullyGreen(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 164347000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:28.620Z",
+        "before": [
+          {
+            "result": {
+              "duration": 424515000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Verify strength bar is fully green",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-strength-bar-is-fully-green;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 308000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 329551000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the first password as \"Abbbbbb.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abbbbbb.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2019189000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user enters \"Abbbbbb.\" and verify the strengthBar is fully green",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Abbbbbb.\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersAndVerifyTheStrengthBarIsFullyGreen(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 161798000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:31.568Z",
+        "before": [
+          {
+            "result": {
+              "duration": 415036000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Verify strength bar is fully green",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-strength-bar-is-fully-green;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 267000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 327048000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the first password as \"Ab123455\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab123455\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2022469000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user enters \"Ab123455\" and verify the strengthBar is fully green",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab123455\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersAndVerifyTheStrengthBarIsFullyGreen(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 162868000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:34.509Z",
+        "before": [
+          {
+            "result": {
+              "duration": 416758000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Verify strength bar is fully green",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;verify-strength-bar-is-fully-green;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 301000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 320950000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters the first password as \"Ab123.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab123.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.user_enters_the_first_password_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2021497000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user enters \"Ab123.\" and verify the strengthBar is fully green",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab123.\"",
+                  "offset": 12
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersAndVerifyTheStrengthBarIsFullyGreen(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Navigate to the Homepage",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 193350000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is on the registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.RegistrationSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-01T00:49:37.446Z",
+        "before": [
+          {
+            "result": {
+              "duration": 417790000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeRegistration()"
+            }
+          }
+        ],
+        "line": 49,
+        "name": "old password should not be accepted",
+        "description": "",
+        "id": "us-008-password-segment-on-homepage-should-be-editable;old-password-should-not-be-accepted;all-data;2",
+        "after": [
+          {
+            "result": {
+              "duration": 163000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1381634000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user navigates to lending page \"https://medunna.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://medunna.com\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.LoginSteps.user_navigates_to_lending_page(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 52972000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user navigates to sign in portal",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.LoginSteps.user_navigates_to_sign_in_portal()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 107631000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user clicks on sign in button",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.LoginSteps.user_clicks_on_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58503000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "user provides the username as \"admin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.LoginSteps.user_provides_the_username_as(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1086704000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user provides the password as \"Admin@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Admin@123\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.LoginSteps.user_provides_the_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64188000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.LoginSteps.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 494116000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user navigates to password",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userNavigatesToPassword()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 156888000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User enters current password as \"Admin@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Admin@123\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersCurrentPasswordAs(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 113439000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "User enters New password as the same \"Admin@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Admin@123\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersNewPasswordAsTheSame(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 82266000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "User enters New password confirmation as the same \"Admin@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Admin@123\"",
+                  "offset": 50
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userEntersNewPasswordConfirmationAsTheSame(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61288000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "User clicks on Save button",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.userClicksOnSaveButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 700818000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "verify the error message is displayed",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US08_PasswordSteps.verifyTheErrorMessageIsDisplayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Us008"
+          },
+          {
+            "name": "@UIregistration"
+          }
+        ]
+      }
+    ],
+    "name": "US_008 Password segment on Homepage should be editable",
+    "description": "",
+    "id": "us-008-password-segment-on-homepage-should-be-editable",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UIFeatures/us08_Password.feature",
+    "tags": [
+      {
+        "name": "@Us008",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@UIregistration",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

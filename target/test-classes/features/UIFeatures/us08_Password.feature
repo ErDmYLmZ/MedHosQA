@@ -29,5 +29,21 @@ Feature: US_008 Password segment on Homepage should be editable
       | Ab123455      |
       | Ab123.        |
 
-    Scenario: old password
-      When user reads all registrant datam
+    Scenario Outline: old password should not be accepted
+      Given user navigates to lending page "<url>"
+      And user navigates to sign in portal
+      And user clicks on sign in button
+      When user provides the username as "<username>"
+      And user provides the password as "<password>"
+      Then user clicks on login button
+      Then user navigates to password
+      And User enters current password as "<password>"
+      And User enters New password as the same "<password>"
+      And User enters New password confirmation as the same "<password>"
+      And User clicks on Save button
+      Then verify the error message is displayed
+
+
+      Examples: all data
+        | url                 | username | password  |
+        | https://medunna.com | admin    | Admin@123 |

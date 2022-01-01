@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="36.341">
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify password confirmation" time="10.089">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "Ab12345."...........................passed
+And user confirms the same password "Ab12345."..............................passed
+And Verify error message "Ab12345." and "Ab12345."..........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify password confirmation 2" time="3.266">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "Ab12345."...........................passed
+And user confirms the same password "Ab12345"...............................passed
+And Verify error message "Ab12345." and "Ab12345"...........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify strength bar is fully green" time="2.994">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "Ab12345."...........................passed
+And user enters "Ab12345." and verify the strengthBar is fully green........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify strength bar is fully green 2" time="2.949">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "AA12345."...........................passed
+And user enters "AA12345." and verify the strengthBar is fully green........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify strength bar is fully green 3" time="2.95">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "ab12345."...........................passed
+And user enters "ab12345." and verify the strengthBar is fully green........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify strength bar is fully green 4" time="2.941">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "Abbbbbb."...........................passed
+And user enters "Abbbbbb." and verify the strengthBar is fully green........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify strength bar is fully green 5" time="2.931">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "Ab123455"...........................passed
+And user enters "Ab123455" and verify the strengthBar is fully green........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="Verify strength bar is fully green 6" time="2.926">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+When user enters the first password as "Ab123.".............................passed
+And user enters "Ab123." and verify the strengthBar is fully green..........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US_008 Password segment on Homepage should be editable" name="old password should not be accepted" time="4.98">
+        <system-out>
+            <![CDATA[Given user is on the registration page......................................passed
+Given user navigates to lending page "https://medunna.com"..................passed
+And user navigates to sign in portal........................................passed
+And user clicks on sign in button...........................................passed
+When user provides the username as "admin"..................................passed
+And user provides the password as "Admin@123"...............................passed
+Then user clicks on login button............................................passed
+Then user navigates to password.............................................passed
+And User enters current password as "Admin@123".............................passed
+And User enters New password as the same "Admin@123"........................passed
+And User enters New password confirmation as the same "Admin@123"...........passed
+And User clicks on Save button..............................................passed
+Then verify the error message is displayed..................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
