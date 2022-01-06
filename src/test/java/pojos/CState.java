@@ -1,43 +1,49 @@
 package pojos;
 
-public class Country {
-
+public class CState {
     private int id;
     private String name;
-    private String date;
+    private Country country;
+
+    public CState(int id, String name, Country country) {
+        this.id = id;
+        this.name = name;
+        this.country = country;
+    }
+
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public String getDate() {
-        return date;
+
+    public Country getCountry() {
+        return country;
     }
-    public void setDate(String date) {
-        this.date = date;
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
-    public Country(){
-    }
-    public Country(int id, String name, String date) {
-        this.id = id;
-        this.name = name;
-        this.date = date;
+
+    public CState() {
     }
 
     @Override
     public String toString() {
-        return "Country{" +
+        return "CState{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", date='" + date + '\'' +
+                ", country=" + country +
                 '}';
     }
-
 }

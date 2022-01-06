@@ -1,12 +1,10 @@
 Feature: Login for common users
 
-
-
-
+  @SmokeTest
   @UIlogin
   Scenario Outline: login functionality
 
-    Given user navigates to lending page "<url>"
+    Given user navigates to landing page "<url>"
     And user navigates to sign in portal
     And user clicks on sign in button
     When user provides the username as "<username>"

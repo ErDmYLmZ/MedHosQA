@@ -30,7 +30,7 @@ Feature: US_008 Password segment on Homepage should be editable
       | Ab123.        |
 
     Scenario Outline: old password should not be accepted
-      Given user navigates to lending page "<url>"
+      Given user navigates to landing page "<url>"
       And user navigates to sign in portal
       And user clicks on sign in button
       When user provides the username as "<username>"

@@ -15,6 +15,13 @@ public class Registrant {
     private String username;
     private String email;
     private String password;
+    private String langKey;
+    public String getLangKey() {
+        return langKey;
+    }
+    public void setLangKey(String langKey) {
+        this.langKey = langKey;
+    }
     public Registrant (){
     }
     public Registrant(int id, String login, boolean activated, String createdBy, String createdDate, String lastModifiedBy, String lastModifiedDate, String ssn, String firstName, String lastName, String username, String email, String password) {

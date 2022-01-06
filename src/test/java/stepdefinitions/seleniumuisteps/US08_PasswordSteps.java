@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.CommonPageElements;
+import pages.PasswordPage;
 import pages.RegistrationPage;
 import utilities.*;
 
@@ -13,6 +14,7 @@ import static org.junit.Assert.*;
 public class US08_PasswordSteps {
     RegistrationPage registrationPage = new RegistrationPage();
     CommonPageElements cp = new CommonPageElements();
+    PasswordPage passwordPage = new PasswordPage();
 
 
 //    @Given("user is on the registration page")
@@ -55,7 +57,7 @@ public class US08_PasswordSteps {
 
     @And("user enters {string} and verify the strengthBar is fully green")
     public void userEntersAndVerifyTheStrengthBarIsFullyGreen(String firstpassword) {
-        String barColor = registrationPage.strengthBar.getAttribute("style");
+        String barColor = passwordPage.strengthBar.getAttribute("style");
         switch (firstpassword){
             case "Ab12345.":
                 ReusableMethods.waitFor(2);
@@ -106,37 +108,39 @@ public class US08_PasswordSteps {
     @Then("user navigates to password")
     public void userNavigatesToPassword() {
         Driver.waitAndClick(cp.signInAndRegistrationPortal);
-        Driver.waitAndClick(cp.Passwordbutton);
+        Driver.waitAndClick(passwordPage.Passwordbutton);
     }
 
     @And("User enters current password as {string}")
     public void userEntersCurrentPasswordAs(String password) {
-        Driver.waitAndSendText(cp.currentPasswordBox, password);
+        Driver.waitAndSendText(passwordPage.currentPasswordBox, password);
 
     }
 
     @And("User enters New password as the same {string}")
     public void userEntersNewPasswordAsTheSame(String password) {
-        Driver.waitAndSendText(cp.newPasswordBox, password);
+        Driver.waitAndSendText(passwordPage.newPasswordBox, password);
 
     }
 
     @And("User enters New password confirmation as the same {string}")
     public void userEntersNewPasswordConfirmationAsTheSame(String password) {
-        Driver.waitAndSendText(cp.confirmPasswordBox, password);
+        Driver.waitAndSendText(passwordPage.confirmPasswordBox, password);
     }
 
     @And("User clicks on Save button")
     public void userClicksOnSaveButton() {
-        Driver.waitAndClick(cp.saveButton);
+        Driver.waitAndClick(passwordPage.saveButton);
 
     }
 
     @Then("verify the error message is displayed")
     public void verifyTheErrorMessageIsDisplayed() {
-        Driver.waitAndClick(cp.ToastifyMessage);
-        String ToastifyMessage =cp.ToastifyMessage.getText();
+        Driver.waitAndClick(passwordPage.ToastifyMessage);
+        String ToastifyMessage =passwordPage.ToastifyMessage.getText();
         assertNotEquals("Old password should not be accepted",ToastifyMessage,"Password changed!");
                 System.out.println(ToastifyMessage);
+        System.out.println("Silinecek");
+        System.out.println("Silinecek2");
     }
 }

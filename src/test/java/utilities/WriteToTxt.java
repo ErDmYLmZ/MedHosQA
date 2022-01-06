@@ -3,6 +3,8 @@ import pojos.Country;
 import pojos.Registrant;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.List;
+
 public class WriteToTxt {
     public static void saveRegistrantData(String fileName, Registrant registrant){
         try {
@@ -31,4 +33,17 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
+    public static void saveDBUserData(String fileName, List<Object> actualData){
+        try {
+            FileWriter fileWriter = new FileWriter(fileName, false);
+            BufferedWriter writer  = new BufferedWriter( fileWriter);
+            for (int i=0; i<actualData.size(); i++) {
+                writer.append(actualData.get(i)  +",\n");
+            }
+            writer.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 }

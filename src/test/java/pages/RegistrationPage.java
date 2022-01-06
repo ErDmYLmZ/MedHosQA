@@ -43,6 +43,16 @@ public class RegistrationPage {
 
 
 
-    @FindBy(xpath = "(//li[@class='point'])[5]")
-    public WebElement strengthBar;
+
+
+
+
+
+
+
+
+
+    //?? yeni olusturdum
+    @FindBy(xpath = "//a[@href='/account/register']")
+    public WebElement registerDropDownMenu;
 }

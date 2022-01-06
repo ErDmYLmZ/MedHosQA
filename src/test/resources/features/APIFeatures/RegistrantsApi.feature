@@ -7,3 +7,12 @@ Feature: Registrant API
     When user deserializes the data
     And user puts the data into correspondent files
     Then user validates the registrants
+
+
+  @SmokeTest
+  @Api
+  @RegisterNewUser
+  Scenario: Create a new registrant using api
+    Given user provides their user information
+    And user sends the post request
+    Then user validates

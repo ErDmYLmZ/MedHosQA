@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cucumber-framework" />
         <module name="medunnastartup" />
+        <module name="medunna1" />
       </profile>
     </annotationProcessing>
   </component>
