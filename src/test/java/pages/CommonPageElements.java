@@ -30,7 +30,18 @@ public class CommonPageElements {
     public WebElement settings;
 
 
-
+    @FindBy(xpath = "//*[contains(text(),'Password')]")
+    public WebElement Passwordbutton;
+    @FindBy(xpath = "//input[@name='currentPassword']")
+    public WebElement currentPasswordBox;
+    @FindBy(xpath = "//input[@name='newPassword']")
+    public WebElement newPasswordBox;
+    @FindBy(xpath = "//input[@name='confirmPassword']")
+    public WebElement confirmPasswordBox;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveButton;
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement ToastifyMessage;
 
 
 

@@ -1,9 +1,12 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
+import java.util.List;
 
 public class DoctorPage {
 
@@ -14,24 +17,22 @@ public DoctorPage(){
 @FindBy (id = "entity-menu")
 public WebElement myPagesDropdown;
 
-@FindBy(xpath = "//span[.='My Inpatients']")
+    @FindBy(xpath = "//span[.='My Inpatients']")
     public WebElement myInpatientsInDropdown;
 
-// tablo ile ilgili kodlari findElements olarak aldigim icin burada degil stepdefinitions icinde kullandim.
-@FindBy(xpath = "//tr")
-public WebElement allRows; // I will use this to get the list of all rows
-
-@FindBy(xpath = "//tr[3]")
-public WebElement row3OfInpatients; // I will use this to get the list of row 3
-
-@FindBy(xpath = "//tr[3]/td[1]")
-public WebElement row3Column1_id_3703; // I get the exact id 3703
-
-@FindBy(xpath = "//tr/td[1]")
-public WebElement idColumnOfInpatientTable; // I get the exact id 3703
-
+    // onemli: findElements icin asagidakini kullanabiliriz!!!
     @FindBy(xpath = "//tr[4]/td[10]") // hardcoded olmamasi icin bunu kullanmadim
     public WebElement editButtonOfID_4901; // I get the exact id 4901
+
+    @FindBy(xpath = "//tr[4]/td[10]") // hardcoded olmamasi icin bunu kullanmadim
+    public List<WebElement> stayingRowList; // I get the exact id 4901
+
+
+    @FindAll({@FindBy(xpath = "//tr/td[4]")}) // driver.findElements(By.xpath="") gibi
+    public List<WebElement> statusOfInpatients ; // settar hocadan- list olarak almak icin
+
+    @FindAll({@FindBy(xpath = "//tr/td[10]")}) //
+    public List<WebElement> editOfInpatients ; // settar hocadan
 
     @FindBy(id = "in-patient-startDate")
     public WebElement startDateInpatient;
@@ -60,11 +61,7 @@ public WebElement idColumnOfInpatientTable; // I get the exact id 3703
     @FindBy(xpath = "//*[contains(text(), 'In Patient is updated')]")
     public WebElement toastifySuccessMessage;
 
-    @FindBy(id = "hospitalmsappfrontendApp.inPatient.home.createOrEditLabel")
-    public WebElement createEditHeading;
 
-    @FindBy(id = "descriptionLabel")
-    public WebElement descriptionLabel;
 
 
     //Bahar's Doctor Page elements
@@ -133,6 +130,11 @@ public WebElement idColumnOfInpatientTable; // I get the exact id 3703
 
     @FindBy(xpath = "//div[contains(text(), 'A new Test is created')]")
     public WebElement successMessageForTestCreation;
+
+
+
+
+
 }
 
 

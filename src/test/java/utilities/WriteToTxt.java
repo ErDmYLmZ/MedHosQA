@@ -1,10 +1,10 @@
 package utilities;
+import pojos.Appointment;
 import pojos.Country;
 import pojos.Registrant;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
-
 public class WriteToTxt {
     public static void saveRegistrantData(String fileName, Registrant registrant){
         try {
@@ -35,7 +35,7 @@ public class WriteToTxt {
     }
     public static void saveDBUserData(String fileName, List<Object> actualData){
         try {
-            FileWriter fileWriter = new FileWriter(fileName, false);
+            FileWriter fileWriter = new FileWriter(fileName, true);
             BufferedWriter writer  = new BufferedWriter( fileWriter);
             for (int i=0; i<actualData.size(); i++) {
                 writer.append(actualData.get(i)  +",\n");
@@ -45,5 +45,27 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
-
+    public static void saveAppointmentData(String fileName, Appointment [] appointments){
+        try {
+            FileWriter fileWriter = new FileWriter(fileName, true);
+            BufferedWriter writer  = new BufferedWriter( fileWriter);
+            for (int i=0; i<appointments.length; i++ ){
+                //Eger patient null ise bu sekilde fail etmez
+                if(appointments[i].getPatient() != null) {
+                    writer.append(appointments[i].getPatient().getFirstName() +"," +   appointments[i].getPatient().getLastName()
+                            +",");
+                    if (appointments[i].getPatient().getUser() != null){
+                        writer.append(appointments[i].getPatient().getUser().getSsn()+",\n");
+                    }else
+                    {
+                        writer.append("\n");
+                    }
+                }
+            }
+            writer.close();
+            Registrant registrant1 = new Registrant();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

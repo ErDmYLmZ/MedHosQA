@@ -68,7 +68,8 @@ public class US01_RegistrationSteps {
     }
     @Then("user reads all registrant data")
     public void user_reads_all_registrant_data() {
+
     }
 
-    //silinecek
+
 }

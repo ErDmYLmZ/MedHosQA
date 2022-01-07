@@ -69,6 +69,7 @@ public class US08_PasswordSteps {
                 System.out.println(barColor);
                 assertTrue(barColor.contains("221"));
             break;
+
             case "ab12345.":
                 ReusableMethods.waitFor(2);
                 System.out.println(barColor);
@@ -108,36 +109,36 @@ public class US08_PasswordSteps {
     @Then("user navigates to password")
     public void userNavigatesToPassword() {
         Driver.waitAndClick(cp.signInAndRegistrationPortal);
-        Driver.waitAndClick(passwordPage.Passwordbutton);
+        Driver.waitAndClick(cp.Passwordbutton);
     }
 
     @And("User enters current password as {string}")
     public void userEntersCurrentPasswordAs(String password) {
-        Driver.waitAndSendText(passwordPage.currentPasswordBox, password);
+        Driver.waitAndSendText(cp.currentPasswordBox, password);
 
     }
 
     @And("User enters New password as the same {string}")
     public void userEntersNewPasswordAsTheSame(String password) {
-        Driver.waitAndSendText(passwordPage.newPasswordBox, password);
+        Driver.waitAndSendText(cp.newPasswordBox, password);
 
     }
 
     @And("User enters New password confirmation as the same {string}")
     public void userEntersNewPasswordConfirmationAsTheSame(String password) {
-        Driver.waitAndSendText(passwordPage.confirmPasswordBox, password);
+        Driver.waitAndSendText(cp.confirmPasswordBox, password);
     }
 
     @And("User clicks on Save button")
     public void userClicksOnSaveButton() {
-        Driver.waitAndClick(passwordPage.saveButton);
+        Driver.waitAndClick(cp.saveButton);
 
     }
 
     @Then("verify the error message is displayed")
     public void verifyTheErrorMessageIsDisplayed() {
-        Driver.waitAndClick(passwordPage.ToastifyMessage);
-        String ToastifyMessage =passwordPage.ToastifyMessage.getText();
+        Driver.waitAndClick(cp.ToastifyMessage);
+        String ToastifyMessage =cp.ToastifyMessage.getText();
         assertNotEquals("Old password should not be accepted",ToastifyMessage,"Password changed!");
                 System.out.println(ToastifyMessage);
         System.out.println("Silinecek");

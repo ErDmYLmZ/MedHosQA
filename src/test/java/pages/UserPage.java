@@ -10,25 +10,25 @@ public class UserPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    //User page elements
+    //User page elements - Bahar
 
-    @FindBy(xpath = "//*[text()='User']")
-    public WebElement userPageText;
+    @FindBy(xpath = "//*[text()='Users']")
+    public WebElement usersPageText;
 
-    //I took the exact user with id:3313
+    //I took the exact user with id:3313 - Bahar
     @FindBy(xpath = "//*[text()='3313']")
     public WebElement user3313;
 
-    @FindBy(xpath = "(//*[text()='View'])[11]")
+    @FindBy(xpath = "(//*[text()='View'])[15]")
     public WebElement viewButton3313;
 
-    @FindBy(xpath = "(//*[text()='Edit'])[11]")
+    @FindBy(xpath = "(//*[text()='Edit'])[15]")
     public WebElement editButton3313;
 
-    @FindBy(xpath = "(//*[text()='Delete'])[11]")
+    @FindBy(xpath = "(//*[text()='Delete'])[15]")
     public WebElement deleteButton3313;
 
-    //User 3313 view page elements
+    //User 3313 view page elements - Bahar
     @FindBy(xpath = "//*[text()='First name']")
     public WebElement userFirstName;
 
@@ -47,7 +47,7 @@ public class UserPage {
     @FindBy(xpath = "//*[text()='Confirm delete operation']")
     public WebElement deleteConfirmationText;
 
-    //The 15th delete button
+    //The 15th delete button - Bahar
     @FindBy(xpath = "(//*[text()='Delete'])[15]")
     public WebElement deleteButton15;
 
@@ -57,7 +57,7 @@ public class UserPage {
     @FindBy(xpath = "//*[text()='Cancel']")
     public WebElement cancelButton;
 
-    //Create or Edit a User Page Elements
+    //Create or Edit a User Page Elements - Bahar
     @FindBy(xpath = "//*[text()='ROLE_PHYSICIAN']")
     public WebElement rolePhysician;
 

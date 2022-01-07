@@ -75,35 +75,55 @@ public class US14_Inpatient_Edit_Steps {
     int editedRow;
     @Given("user clicks edit button on inpatients page {string}")
     public void user_clicks_edit_button_on_inpatients_page(String xpathOfEdit) throws InterruptedException {
-        List <WebElement> listOfInpatientRows = Driver.getDriver().findElements(By.xpath("//tr"));
-        System.out.println("number of rows are = "+listOfInpatientRows.size());
-
-        // The following is to find the patient with STAYING status:
-        for (int i =0; i<listOfInpatientRows.size(); i++){
-            System.out.println(listOfInpatientRows.get(i).getText());
-            if(listOfInpatientRows.get(i).getText().contains("STAYING")) {
-                xpathOfEdit = "//tr["+i+"]/td[10]";
-               // editButtonWithStaying = Driver.getDriver().findElement(By.xpath(xpathOfEdit));
-                System.out.println("xpath in if state=  " + xpathOfEdit);
-                editedRow = i;
-                break;
-            }
-            System.out.println("xpath in for loop = " + xpathOfEdit);
-        }
-        System.out.println("edited row is = " + editedRow);
-        System.out.println("in the method xpath =" + xpathOfEdit);
-        WebElement editButtonWithStaying = Driver.getDriver().findElement(By.xpath(xpathOfEdit));
-        System.out.println("This is from the row with STAYING " +editButtonWithStaying.getText());
+//        List <WebElement> listOfInpatientRows = Driver.getDriver().findElements(By.xpath("//tr"));
+//        System.out.println("number of rows are = "+listOfInpatientRows.size());
+//
+//        // The following is to find the patient with STAYING status:
+//        for (int i =0; i<listOfInpatientRows.size(); i++){
+//            System.out.println(listOfInpatientRows.get(i).getText());
+//            if(listOfInpatientRows.get(i).getText().contains("STAYING")) {
+//                xpathOfEdit = "//tr["+i+"]/td[10]";
+//               // editButtonWithStaying = Driver.getDriver().findElement(By.xpath(xpathOfEdit));
+//                System.out.println("xpath in if state=  " + xpathOfEdit);
+//                editedRow = i;
+//                break;
+//            }
+//            System.out.println("xpath in for loop = " + xpathOfEdit);
+//        }
+//        System.out.println("edited row is = " + editedRow);
+//        System.out.println("in the method xpath =" + xpathOfEdit);
+//        WebElement editButtonWithStaying = Driver.getDriver().findElement(By.xpath(xpathOfEdit));
+//        System.out.println("This is from the row with STAYING " +editButtonWithStaying.getText());
 
 //    ReusableMethods.clickWithJS(doctorPage.editButtonOfID_4901); calismadi !!!
         // scroll olsa yukarida kaliyor, scroll olmassa asagida kaliyor. Arada kalan button!!!
         // Actions kullanarak down arrow ile scroll yapip tikladim!
-        Actions actions = new Actions(Driver.getDriver());
+//        Actions actions = new Actions(Driver.getDriver());
+//        actions.sendKeys(Keys.ARROW_DOWN).perform();
+//        actions.sendKeys(Keys.ARROW_DOWN).perform();
+//        actions.sendKeys(Keys.ARROW_DOWN).perform();
+//        ReusableMethods.waitFor(5);
+//        ReusableMethods.scrollIntoViewJS(editButtonWithStaying);
+//        Driver.waitAndClick(editButtonWithStaying);
+
+        for (int i=0;  i<doctorPage.statusOfInpatients.size(); i++) {
+
+            if(doctorPage.statusOfInpatients.get(i).getText().equals("STAYING")) {
+                        Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         actions.sendKeys(Keys.ARROW_DOWN).perform();
-        actions.sendKeys(Keys.ARROW_DOWN).perform();
-        Thread.sleep(2000);
-        Driver.waitAndClick(editButtonWithStaying);
+
+                doctorPage.editOfInpatients.get(i).click();
+                editedRow=i;
+
+                break;
+            }
+            System.out.println(doctorPage.statusOfInpatients.get(i).getText());
+            System.out.println(doctorPage.editOfInpatients.get(i).getText());
+        }
+
+
+
     }
     Faker faker = new Faker();
     Date startDate = faker.date().past(20, TimeUnit.DAYS);
@@ -135,38 +155,73 @@ public class US14_Inpatient_Edit_Steps {
 //        String textOfEditedStartDate = editedStartDateEl.getText();
 //        System.out.println(textOfEditedStartDate); // 31/12/21 21:51
         // yukaridakini metod ile yaptim:
-        String textOfEditedStartDate = OurMethods.getElementTextWithRowAndColumn(editedRow,2);
+        String textOfEditedStartDate = OurMethods.getElementTextByRowAndColumn(editedRow,2);
         System.out.println(textOfEditedStartDate);
 
         String reformattedStartDate = OurMethods.reformatForTestCase(startDate);
         System.out.println("reformatted start date = " + reformattedStartDate);//31/12/21 21:51
         Assert.assertNotEquals(reformattedStartDate, textOfEditedStartDate); // TestCase fails - BUG
     }
+    @Given("user clicks edit button on inpatients page {string} after update")
+    public void user_clicks_edit_button_on_inpatients_page_after_update (String xpathOfEdit) throws InterruptedException {
+       WebElement editButtonWithStaying = OurMethods.getElementByRowAndColumn(editedRow, 10);
+
+//    ReusableMethods.clickWithJS(doctorPage.editButtonOfID_4901); calismadi !!!
+        // scroll olsa yukarida kaliyor, scroll olmassa asagida kaliyor. Arada kalan button!!!
+        // Actions kullanarak down arrow ile scroll yapip tikladim!
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_UP).perform();
+//        actions.sendKeys(Keys.ARROW_DOWN).perform();
+
+        //ReusableMethods.scrollIntoViewJS(editButtonWithStaying);
+        ReusableMethods.waitFor(2);
+        Driver.waitAndClick(editButtonWithStaying);
+    }
+
+
+    Date createdDate = faker.date().past(20, TimeUnit.DAYS);
+    Date endDate = faker.date().future(20, TimeUnit.DAYS);
     @Given("user updates end date")
     public void user_updates_end_date() {
-
-
-
+//        String formattedEndDate = OurMethods.formatDateToSendKeys(endDate);
+//        System.out.println("formatted end date:" + formattedEndDate);
+        ReusableMethods.scrollToElement(doctorPage.endDateInpatient);
+//        doctorPage.endDateInpatient.sendKeys(formattedEndDate);
+        doctorPage.endDateInpatient.sendKeys("23010020220657");
     }
     @Given("validate that end date is updated")
     public void validate_that_end_date_is_updated() {
-        ReusableMethods.scrollToElement(doctorPage.editButtonOfID_4901);
+        String textOfEditedEndDate = OurMethods.getElementTextByRowAndColumn(editedRow,3);
+        System.out.println(textOfEditedEndDate);
+
+        String reformattedEndDate = OurMethods.reformatForTestCase(endDate);
+        System.out.println("reformatted end date = " + reformattedEndDate);//31/12/21 21:51
+        Assert.assertNotEquals(reformattedEndDate, textOfEditedEndDate); // TestCase fails - BUG
     }
+
+    String description = faker.lorem().characters(2,30);
     @Given("user updates Description")
     public void user_updates_description() {
-
+    doctorPage.descriptionInpatient.sendKeys(description);
     }
     @Given("validate that Description is updated")
     public void validate_that_description_is_updated() {
-
+        String textOfEditedDescription = OurMethods.getElementTextByRowAndColumn(editedRow,5);
+        System.out.println(textOfEditedDescription);
+        Assert.assertEquals(description, textOfEditedDescription);
     }
     @Given("user updates Created Date")
     public void user_updates_created_date() {
-
+        String formattedCreateDate = OurMethods.formatDateToSendKeys(createdDate);
+        doctorPage.createdDateInpatient.sendKeys(formattedCreateDate);
     }
     @Given("validate that Created Date is NOT updated")
     public void validate_that_created_date_is_not_updated() {
+        String textOfEditedCreateDate = OurMethods.getElementTextByRowAndColumn(editedRow, 6);
+        System.out.println(textOfEditedCreateDate);
 
+        String reformattedCreateDate = OurMethods.reformatForTestCase(createdDate);
+        Assert.assertEquals(reformattedCreateDate,textOfEditedCreateDate);
     }
 
 

@@ -24,6 +24,7 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
     public static void createConnection(String url, String user, String password) {
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -32,6 +33,8 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
+
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
      */

@@ -11,6 +11,7 @@ import pages.UserPage;
 import utilities.Driver;
 
 
+
 public class US20_Admin_Manages_Users_Steps {
     LoginPage loginPage = new LoginPage();
     CommonPageElements commonPageElements = new CommonPageElements();
@@ -24,7 +25,10 @@ public class US20_Admin_Manages_Users_Steps {
     }
     @Given("Admin should navigate to sign in page")
     public void admin_should_navigate_to_sign_in_page() {
+
         Driver.waitAndClick(commonPageElements.signInAndRegistrationPortal);
+        Driver.waitAndClick(commonPageElements.signIn);
+
     }
     @Given("Admin enters username {string}")
     public void admin_enters_username(String username) {
@@ -32,10 +36,12 @@ public class US20_Admin_Manages_Users_Steps {
     }
     @Given("Admin enters password {string}")
     public void admin_enters_password(String password) {
+
         Driver.waitAndSendText(loginPage.password, password);
     }
     @Given("Admin clicks sign in button")
     public void admin_clicks_sign_in_button() {
+
         Driver.waitAndClick(loginPage.loginButton);
     }
     @Given("Admin clicks Administration dropdown, selects User management and clicks")
@@ -45,6 +51,7 @@ public class US20_Admin_Manages_Users_Steps {
     }
     @Given("Admin clicks view button of an existing user")
     public void admin_clicks_view_button_of_an_existing_user() {
+
         Driver.clickWithJS(userPage.viewButton3313);
     }
     @Then("admin verifies registered people info as firstname, lastname, email etc.")
@@ -78,6 +85,7 @@ public class US20_Admin_Manages_Users_Steps {
         Driver.waitAndSendText(userPage.lastNameBox, "Jones");
 
         Driver.waitAndClick(userPage.activatedCheckbox);
+        Driver.waitAndClick(userPage.activatedCheckbox);
         Driver.waitAndClick(userPage.rolePhysician);
     }
     @Given("Admin clicks save button")
@@ -87,13 +95,13 @@ public class US20_Admin_Manages_Users_Steps {
     @Then("Admin sees success message and verifies Users text as navigates back to that page")
     public void admin_sees_success_message_and_verifies_users_text_as_navigates_back_to_that_page() {
         Driver.wait(2);
-        Assert.assertTrue(userPage.userPageText.isDisplayed());
+        Assert.assertTrue(userPage.usersPageText.isDisplayed());
     }
 
     //TC0003 Step Defs
     @Given("Admin is on the Users page")
     public void admin_is_on_the_users_page() {
-        Assert.assertTrue(userPage.userPageText.isDisplayed());
+        Assert.assertTrue(userPage.usersPageText.isDisplayed());
     }
     @Given("Admin clicks delete button of an account")
     public void admin_clicks_delete_button_of_an_account() {

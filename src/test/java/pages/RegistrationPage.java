@@ -1,11 +1,14 @@
 package pages;
 
+import com.aventstack.extentreports.observer.entity.NamedAttributeTestEntity;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class RegistrationPage {
+
+
 
     public RegistrationPage(){
 

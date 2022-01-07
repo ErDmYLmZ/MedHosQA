@@ -1,4 +1,5 @@
 package utilities;
+
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,24 +18,36 @@ public class OurMethods {
     }
 
     // girilen row ve column a gore ilgili elemanin text'ini verir:
-    public static String getElementTextWithRowAndColumn(int row, int column) {
+    public static String getElementTextByRowAndColumn(int row, int column) {
         String xpath = "//tr["+row+"]/td["+column+"]";
         System.out.println("xpath of edited start date : " + xpath);
         WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
         return element.getText();
     }
+    public static WebElement getElementByRowAndColumn(int row, int column) {
+        String xpath = "//tr["+row+"]/td["+column+"]";
+        System.out.println("xpath of edited start date : " + xpath);
+        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
+        return element;
+    }
 
+public static String formatDateToSendKeys(Date anyDate) {
 
-public static String formatDateToSendKeys(Date startDate) {
-    Faker faker = new Faker();
     //startDate = faker.date().past(20, TimeUnit.DAYS);
    // System.out.println(startDate);
 
     SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy hh:mm");
-    String formattedStartDate = format.format(startDate);
+    String formattedAnyDate = format.format(anyDate);
     // System.out.println(formattedStartDate);
-return  formattedStartDate;
+return  formattedAnyDate;
 }
+public static String getBirthdayWithFaker_AM_PM () {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyyyy-MM-dd,hh:mmaa");
+    Faker faker = new Faker();
+    String birthdayWith_AM_PM = sdf.format(faker.date().birthday(5, 85));
+    return birthdayWith_AM_PM;
+}
+
 
     // web sayfasinda giris icin aldigi tarih noktali 30.12.2022 12:21 seklinde
     // Fakat kaydedilen ve getText ile alinan tarih formati 30/12/22 12:51 seklinde.
@@ -60,7 +73,7 @@ return  formattedStartDate;
         Faker faker = new Faker();
         Date startDate = faker.date().past(20, TimeUnit.DAYS);
         System.out.println(startDate);  //Tue Dec 28 23:17:52 EET 2021
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyyyyhh:mm");
         String formattedStartDate = format.format(startDate);
         System.out.println(formattedStartDate);//28.12.2021 11:17
 
@@ -77,9 +90,6 @@ return  formattedStartDate;
 
         //startDate = Tue Dec 28 23:17:52 EET 2021
         System.out.println(reformatForTestCase(startDate));//28/12/21 11:17
-
-
-
 
     }
 }

@@ -29,4 +29,15 @@ public class LoginPage {
     @FindBy(xpath="//*[text()='Register a new account']")
     public WebElement proceedToRegistration;
 
+
+
+
+
+
+
+
+    //??yenisini olusturdum
+    @FindBy(id = "login-item")
+    public WebElement signInDropDown;
+
 }

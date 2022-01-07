@@ -35,6 +35,15 @@ public class MakeAnAppointmentPage {
     @FindBy(xpath = "//div[@class='Toastify']")
     public WebElement greenPart;
 
+    @FindBy(xpath = "//*[text()='MY PAGES(PATIENT)']")
+    public WebElement myPagesPatientDropDownMenu;
+
+    @FindBy(xpath = "(//*[text()='My Appointments'])[1]")
+    public WebElement myAppointmentsDropDown;
+
+    @FindBy(id = "appointment-heading")
+    public WebElement appointmentsDisplayed;
+
 
 
 
