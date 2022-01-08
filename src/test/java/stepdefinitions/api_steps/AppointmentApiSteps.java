@@ -30,10 +30,13 @@ public class AppointmentApiSteps {
     public void user_deserializes_the_appointment_data() throws JsonProcessingException {
         ObjectMapper obj = new ObjectMapper();
         appointments = obj.readValue(response.asString(), Appointment[].class);
-        System.out.println("size: "+appointments.length);
+        System.out.println("size: " + appointments.length);
+
+
     }
-    @When("user saves the appontment data into correspondent files")
-    public void user_saves_the_appontment_data_into_correspondent_files() {
+
+    @When("user saves the appointment data into correspondent file")
+    public void user_saves_the_appointment_data_into_correspondent_file() {
         WriteToTxt.saveAppointmentData(fileName, appointments);
     }
 }

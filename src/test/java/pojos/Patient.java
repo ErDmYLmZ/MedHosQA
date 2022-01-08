@@ -1,16 +1,16 @@
 package pojos;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
+import io.cucumber.java.en.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Patient {
 
-    private  String createdBy;
-    private  String createdDate;
-    private  int id;
+    private String createdBy;
+    private String createdDate;
+    private int id;
     private String firstName;
     private String lastName;
-    private String birthDay;
+    private String birthDate;
     private String phone;
     private String gender;
     private String adress;
@@ -20,13 +20,13 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(String createdBy, String createdDate, int id, String firstName, String lastName, String birthDay, String phone, String gender, String adress, String email, User user) {
+    public Patient(String createdBy, String createdDate, int id, String firstName, String lastName, String birthDate, String phone, String gender, String adress, String email, User user) {
         this.createdBy = createdBy;
         this.createdDate = createdDate;
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDay = birthDay;
+        this.birthDate = birthDate;
         this.phone = phone;
         this.gender = gender;
         this.adress = adress;
@@ -74,12 +74,12 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    public String getBirthDay() {
-        return birthDay;
+    public String getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getPhone() {
@@ -98,12 +98,12 @@ public class Patient {
         this.gender = gender;
     }
 
-    public String getAddress() {
+    public String getAdress() {
         return adress;
     }
 
-    public void setAddress(String address) {
-        this.adress = address;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
     public String getEmail() {
@@ -130,10 +130,10 @@ public class Patient {
                 ", id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", birthDay='" + birthDay + '\'' +
+                ", birthDate='" + birthDate + '\'' +
                 ", phone='" + phone + '\'' +
                 ", gender='" + gender + '\'' +
-                ", address='" + adress + '\'' +
+                ", adress='" + adress + '\'' +
                 ", email='" + email + '\'' +
                 ", user=" + user +
                 '}';
