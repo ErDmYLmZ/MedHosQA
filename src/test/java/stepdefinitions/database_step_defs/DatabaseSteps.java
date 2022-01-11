@@ -5,13 +5,10 @@ import utilities.ConfigReader;
 import utilities.DatabaseUtility;
 import utilities.ReadTxt;
 import utilities.WriteToTxt;
-
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.assertTrue;
-
 public class DatabaseSteps {
     List<Object> actualData;
     String fileName = ConfigReader.getProperty("db_user_ssn");
@@ -29,16 +26,13 @@ public class DatabaseSteps {
     }
     @Then("user validates DB data")
     public void user_validates_db_data() {
-
         List<String> actualSSNs = ReadTxt.returnUserSSNs(fileName);
         System.out.println(actualSSNs);
-
         List<String>expectedSsns = new ArrayList<>();
         expectedSsns.add("856-45-6789");
         expectedSsns.add("856-45-6789");
         expectedSsns.add("856-45-6776");
         System.out.println(expectedSsns);
         assertTrue("The Data for SSN ids are not matching!!",actualSSNs.containsAll(expectedSsns));
-
     }
 }

@@ -1,22 +1,26 @@
 package stepdefinitions.api_steps;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import pojos.Registrant;
 import utilities.ConfigReader;
 import utilities.ReadTxt;
 import utilities.WriteToTxt;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static utilities.ApiRequestsUtils.getRequest;
 import static utilities.Authentication.generateToken;
+
 public class RegistrantApiSteps {
     Response response;
     String token;

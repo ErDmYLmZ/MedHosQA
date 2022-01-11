@@ -17,6 +17,9 @@ public class CommonPageElements {
     @FindBy(id="login-item")
     public WebElement signIn;
 
+    @FindBy(xpath = "//a[@href='/account/register']")
+    public WebElement register;
+
     @FindBy(xpath = "//*[text()='Items&Titles']")
     public WebElement titlesAllUsers;
 
@@ -51,4 +54,7 @@ public class CommonPageElements {
 
     @FindBy(xpath = "//span[text()='My Appointments']")
     public WebElement myAppointmentsButton;
+
+    @FindBy(xpath = "//*[text()='Physician']")
+    public WebElement physician;
 }

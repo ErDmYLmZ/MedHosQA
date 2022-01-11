@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import static io.restassured.RestAssured.given;
 public class Authentication extends MedunnaBaseUrl {
+
     public static String generateToken(){
         //Set the base url
         spec.pathParams("first","api","second","authenticate");

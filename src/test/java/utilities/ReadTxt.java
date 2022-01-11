@@ -1,9 +1,12 @@
 package utilities;
+
 import pojos.Registrant;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+
 public class ReadTxt {
     public static List<Registrant> returnAllUserData(String filename){
         List<Registrant> all = new ArrayList<>();

@@ -13,22 +13,20 @@ public class OurMethods {
     public static WebElement getWebElementWithRowAndColumn(int row, int column) {
         String xpath = "//tr["+row+"]/td["+column+"]";
         System.out.println("xpath of edited start date : " + xpath);
-        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
-        return element;
+        return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
     // girilen row ve column a gore ilgili elemanin text'ini verir:
     public static String getElementTextByRowAndColumn(int row, int column) {
-        String xpath = "//tr["+row+"]/td["+column+"]";
-        System.out.println("xpath of edited start date : " + xpath);
-        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
-        return element.getText();
+        String xpathEditedRow = "//tr["+row+"]/td["+column+"]";
+        System.out.println("xpath of edited date : " + xpathEditedRow);
+        return Driver.getDriver().findElement(By.xpath(xpathEditedRow)).getText();
     }
     public static WebElement getElementByRowAndColumn(int row, int column) {
-        String xpath = "//tr["+row+"]/td["+column+"]";
-        System.out.println("xpath of edited start date : " + xpath);
-        WebElement element = Driver.getDriver().findElement(By.xpath(xpath));
-        return element;
+        String xpathEditedRow = "//tr["+row+"]/td["+column+"]";
+        System.out.println("xpath of edited date for the element : " + xpathEditedRow);
+
+        return Driver.getDriver().findElement(By.xpath(xpathEditedRow));
     }
 
 public static String formatDateToSendKeys(Date anyDate) {

@@ -8,8 +8,6 @@ Feature: Registrant API
     And user puts the data into correspondent files
     Then user validates the registrants
 
-
-  @SmokeTest
   @Api
   @RegisterNewUser
   Scenario: Create a new registrant using api

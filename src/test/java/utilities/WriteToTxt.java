@@ -1,11 +1,16 @@
 package utilities;
+
 import pojos.Appointment;
-import pojos.Country;
+import pojos.Patient;
 import pojos.Registrant;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
+
 public class WriteToTxt {
+
+
     public static void saveRegistrantData(String fileName, Registrant registrant){
         try {
             FileWriter fileWriter = new FileWriter(fileName, true);
@@ -67,5 +72,35 @@ public class WriteToTxt {
         }catch (Exception e){
             e.printStackTrace();
         }
+
     }
+
+
+    public static void savePatientsApiData(String fileName, Patient[] patientsPojo) {
+        try {
+            FileWriter fileWriter = new FileWriter(fileName, true);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            for (int i =0; i<patientsPojo.length; i++){
+                if(patientsPojo[i] != null) {
+                writer.append(patientsPojo[i]+",\n");
+                    System.out.println(patientsPojo[i]);
+                    if (patientsPojo[i].getUser() != null){
+                        writer.append(patientsPojo[i].getUser().getSsn()+",\n");
+                        System.out.println(patientsPojo[i].getUser().getSsn());
+                    }else
+                    {
+                        writer.append("\n");
+                    }
+            }
+            }
+
+            writer.close();
+            Patient patients = new Patient();
+        }catch (Exception e){
+              e.printStackTrace();
+    }
+        }
+
+
+
 }

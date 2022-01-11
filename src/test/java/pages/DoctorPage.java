@@ -4,35 +4,39 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
 import java.util.List;
 
 public class DoctorPage {
 
-public DoctorPage(){
-    PageFactory.initElements(Driver.getDriver(), this);
-}
+    public DoctorPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
-@FindBy (id = "entity-menu")
-public WebElement myPagesDropdown;
+    @FindBy (id = "entity-menu")
+    public WebElement myPagesDropdown;
 
     @FindBy(xpath = "//span[.='My Inpatients']")
     public WebElement myInpatientsInDropdown;
 
-    // onemli: findElements icin asagidakini kullanabiliriz!!!
+
     @FindBy(xpath = "//tr[4]/td[10]") // hardcoded olmamasi icin bunu kullanmadim
     public WebElement editButtonOfID_4901; // I get the exact id 4901
 
     @FindBy(xpath = "//tr[4]/td[10]") // hardcoded olmamasi icin bunu kullanmadim
     public List<WebElement> stayingRowList; // I get the exact id 4901
 
-
+    // onemli: findElements icin asagidakini kullanabiliriz!!!
     @FindAll({@FindBy(xpath = "//tr/td[4]")}) // driver.findElements(By.xpath="") gibi
     public List<WebElement> statusOfInpatients ; // settar hocadan- list olarak almak icin
 
     @FindAll({@FindBy(xpath = "//tr/td[10]")}) //
     public List<WebElement> editOfInpatients ; // settar hocadan
+
+    @FindAll({@FindBy(xpath = "//tr/td[1]")}) // id sutununun xpath i
+    public List<WebElement> listOfInpatientIDs ;
 
     @FindBy(id = "in-patient-startDate")
     public WebElement startDateInpatient;
@@ -49,9 +53,6 @@ public WebElement myPagesDropdown;
     @FindBy(id = "in-patient-status")
     public WebElement statusInpatient;
 
-    @FindBy(id = "in-patient-room")
-    public WebElement roomInpatient;
-
     @FindBy(id = "save-entity")
     public WebElement saveInpatient;
 
@@ -60,6 +61,20 @@ public WebElement myPagesDropdown;
 
     @FindBy(xpath = "//*[contains(text(), 'In Patient is updated')]")
     public WebElement toastifySuccessMessage;
+
+    @FindBy(xpath = "//*[contains(text(), 'InPatient status can not be changed')]")
+    public WebElement toastifyFailMessage;
+
+    @FindBy(id = "fromDate")
+    public WebElement fromDateInpatients;
+
+    @FindBy(id = "toDate")
+    public WebElement toDateInpatients;
+
+    @FindBy(id = "in-patient-room")
+    public WebElement roomInpatients;
+
+
 
 
 
@@ -130,10 +145,6 @@ public WebElement myPagesDropdown;
 
     @FindBy(xpath = "//div[contains(text(), 'A new Test is created')]")
     public WebElement successMessageForTestCreation;
-
-
-
-
 
 }
 

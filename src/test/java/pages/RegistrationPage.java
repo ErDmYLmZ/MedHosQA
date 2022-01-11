@@ -32,6 +32,9 @@ public class RegistrationPage {
     @FindBy(name = "firstPassword")
     public WebElement firstPasswordTextbox;
 
+    @FindBy(xpath = "(//li[@class='point'])[5]")
+    public WebElement strengthBar;
+
     @FindBy(name = "secondPassword")
     public WebElement newPasswordTextbox;
 

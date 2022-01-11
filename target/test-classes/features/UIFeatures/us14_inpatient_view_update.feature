@@ -19,36 +19,59 @@
         Given user navigates to My Inpatients page
         Then verify that doctor can view all inpatient data
 
-    @TC002_update_inpatient_data_valid_data
-    Scenario: Doctor can update all inpatient data with valid data
-      Given user clicks edit button on inpatients page "xpathOfEdit"
+    @TC002_3_update_startdate
+    Scenario: Doctor can update start date
+      Given user clicks edit button on inpatients page
       And user updates start date
       And user clicks on save button on edit inpatient page
       Then user views success message
       And validate that the data is updated
-#      Given user clicks edit button on inpatients page
 
-#      And user updates end date
+    @TC004_update_enddate
+      Scenario: Doctor can update enddate
+      Given user clicks edit button on inpatients page after update
+      And user updates end date
+      And user clicks on save button on edit inpatient page
+      Then user views success message
+      And validate that end date is updated
+
+    @TC005_update_description
+    Scenario: Doctor can update description
+      Given user clicks edit button on inpatients page after update
+      And user updates Description
+      And user clicks on save button on edit inpatient page
+      Then user views success message
+      And validate that Description is updated
+
+    @TC006_update_createddate
+    Scenario: Doctor can update createddate
+      Given user clicks edit button on inpatients page after update
+      And user updates Created Date
+      And user clicks on save button on edit inpatient page
+      Then user views success message
+      And validate that Created Date is NOT updated
+
+        @TC005_update_room
+        Scenario: doctor can update room
+
+        Given user clicks edit button on inpatients page after update
+        And user updates ROOM
+        And user clicks on save button on edit inpatient page
+        Then user views success message
+        And validate that ROOM is updated
+
+#    @TC007_update_status_from_discharged
+#    Scenario: Doctor can update status from DISCHARGED to other statuses
+#      Given user clicks edit button of a DISCHARGED inpatient
+#      And user updates status
 #      And user clicks on save button on edit inpatient page
-#      Given user clicks edit button on inpatients page
-#      And validate that end date is updated
-#      Given user clicks edit button on inpatients page
-#
-#      And user updates Description
-#      And user clicks on save button on edit inpatient page
-#      Given user clicks edit button on inpatients page
-#      And validate that Description is updated
-#      Given user clicks edit button on inpatients page
-#
-#      And user updates Created Date
-#      And user clicks on save button on edit inpatient page
-#      Given user clicks edit button on inpatients page
-#      And validate that Created Date is NOT updated
-#      Given user clicks edit button on inpatients page
+#      Then user views success message
+#      And validate that status is updated
+
 
 #    @TC003_update_inpatient_data_invalid_data
 #    Scenario: Doctor can not update all inpatient data with invalid data?
-#
+
 #      @TC004_update_status
 #      Scenario Outline: Doctor can update status
 #      Given user clicks edit button on inpatients page
@@ -64,16 +87,4 @@
 #          | STAYING |
 #          | DISCHARGED |
 #          | CANCELLED |
-#
-#
-#        @TC005_update_room
-#        Scenario: doctor can update room
-#
-#        Given user clicks edit button on inpatients page
-#        And user updates ROOM
-#        And user clicks on save button on edit inpatient page
-#        Given user clicks edit button on inpatients page
-#        And validate that ROOM is updated
-
-
 

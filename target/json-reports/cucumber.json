@@ -1,0 +1,583 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 252000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to url",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-08T23:23:27.599Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10673000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify the password is secure",
+        "description": "",
+        "id": "registration-password;verify-the-password-is-secure;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 84000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User navigates to Registration Page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_navigates_to_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 86000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters a new password as \"Ab12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_new_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the strength bar is green",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_the_strength_bar_is_green()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationPassword"
+          },
+          {
+            "name": "@UIlogin"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 221000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to url",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-08T23:23:38.784Z",
+        "before": [
+          {
+            "result": {
+              "duration": 189000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Verify the password is secure",
+        "description": "",
+        "id": "registration-password;verify-the-password-is-secure;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 86000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User navigates to Registration Page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_navigates_to_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters a new password as \"aBc1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"aBc1234\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_new_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the strength bar is green",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_the_strength_bar_is_green()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationPassword"
+          },
+          {
+            "name": "@UIlogin"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 217000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to url",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-08T23:23:39.359Z",
+        "before": [
+          {
+            "result": {
+              "duration": 175000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify the password is secure",
+        "description": "",
+        "id": "registration-password;verify-the-password-is-secure;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 69000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User navigates to Registration Page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_navigates_to_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters a new password as \"Ab1cdef\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab1cdef\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_new_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the strength bar is green",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_the_strength_bar_is_green()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationPassword"
+          },
+          {
+            "name": "@UIlogin"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 222000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to url",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-08T23:23:39.891Z",
+        "before": [
+          {
+            "result": {
+              "duration": 173000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify the password is secure",
+        "description": "",
+        "id": "registration-password;verify-the-password-is-secure;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 67000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User navigates to Registration Page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_navigates_to_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 54000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters a new password as \"Ab1234.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab1234.\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_new_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the strength bar is green",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_the_strength_bar_is_green()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationPassword"
+          },
+          {
+            "name": "@UIlogin"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 218000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to url",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-08T23:23:40.428Z",
+        "before": [
+          {
+            "result": {
+              "duration": 175000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify the password is secure",
+        "description": "",
+        "id": "registration-password;verify-the-password-is-secure;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 65000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User navigates to Registration Page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_navigates_to_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters a new password as \"Ab12345.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab12345.\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_new_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify the strength bar is green",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_the_strength_bar_is_green()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationPassword"
+          },
+          {
+            "name": "@UIlogin"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 217000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User goes to url",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-01-08T23:23:40.951Z",
+        "before": [
+          {
+            "result": {
+              "duration": 175000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "User enters weak password",
+        "description": "",
+        "id": "registration-password;user-enters-weak-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 72000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user is on the Registration page",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_is_on_the_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 36000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user enters a password as \"Ab123.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ab123.\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_password_as(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Verify Verify the strength bar is red",
+            "match": {
+              "location": "stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_verify_the_strength_bar_is_red()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RegistrationPassword"
+          },
+          {
+            "name": "@UIlogin"
+          },
+          {
+            "name": "@UIRegistrationPasswordNegative"
+          }
+        ]
+      }
+    ],
+    "name": "Registration Password",
+    "description": "",
+    "id": "registration-password",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UIFeatures/us03_registration_password.feature",
+    "tags": [
+      {
+        "name": "@RegistrationPassword",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
