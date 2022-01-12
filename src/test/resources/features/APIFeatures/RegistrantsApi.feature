@@ -16,3 +16,7 @@ Feature: Registrant API
     Given user provides their user information
     And user sends the post request
     Then user validates
+
+
+
+

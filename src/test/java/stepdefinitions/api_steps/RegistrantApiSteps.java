@@ -33,6 +33,7 @@ public class RegistrantApiSteps {
     @Given("user sets the url and generates the token")
     public void user_sets_the_url_and_generates_the_token() {
         token = generateToken();
+        System.out.println(token);
     }
     @Given("user sends the get request and gets the response")
     public void user_sends_the_get_request_and_gets_the_response() {

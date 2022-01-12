@@ -36,7 +36,7 @@ public class AdminPage {
     @FindBy(xpath = "//*[text()='Items&Titles']")
     public WebElement titlesDropdown;
 
-    @FindBy(xpath = "//*[text()='Patient']")
+    @FindBy(xpath = "//*[text()='Patients']")
     public WebElement patient;
 
     @FindBy(xpath = "//*[text()='Staff']")

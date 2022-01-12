@@ -7,15 +7,21 @@ import utilities.Driver;
 
 public class PhysiciansCreateEditPage {
 
-    public PhysiciansCreateEditPage() {
+    public PhysiciansCreateEditPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
     @FindBy(id="searchSSN")
-    public WebElement ssnButton;
+    public WebElement ssnBox;
 
     @FindBy(xpath = "//*[text()='Search User']")
     public WebElement searchUserButton;
+
+    @FindBy(xpath = "//*[text()='User found with search SSN']")
+    public WebElement successMessage;
+
+    @FindBy(name="useSSNSearch")
+    public WebElement useSearchCheckbox;
 
     @FindBy(name="firstName")
     public WebElement firstName;

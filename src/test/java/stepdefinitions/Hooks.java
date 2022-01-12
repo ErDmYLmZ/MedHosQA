@@ -1,16 +1,13 @@
 package stepdefinitions;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utilities.ConfigReader;
 import utilities.DBUtils;
+import utilities.DatabaseUtility;
 import utilities.Driver;
-
 import java.io.IOException;
-
 import static base_url_setup.MedunnaBaseUrl.medunnaSetup;
-
 public class Hooks {
     //    What is hooks class in cucumber?
 //    hooks has Before and After annotations.
@@ -31,13 +28,11 @@ public class Hooks {
     public void beforeApi() {
         medunnaSetup();
     }
-
-    @Before(order=4, value="@DB")
+    @Before(order=4, value="@DBtesting")
     public void beforeDatabase() {
-        DBUtils.createConnection(ConfigReader.getProperty("db_credentials_url"),
-                ConfigReader.getProperty("db_username"), ConfigReader.getProperty("db_password"));
-
-
+        DatabaseUtility.createConnection(ConfigReader.getProperty("db_credentials_url"),
+                ConfigReader.getProperty("db_username"),
+                ConfigReader.getProperty("db_password"));
     }
     @After(order=3, value="@UIregistration")
     public void tearDown(Scenario scenario) throws IOException {

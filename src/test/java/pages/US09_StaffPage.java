@@ -28,11 +28,11 @@ public class US09_StaffPage {
     @FindBy(xpath = "//*[text()='MY PAGES']")
     public WebElement myPages;
 
-    @FindBy(xpath = "(//*[text()='Search Patient'])[1]")
+    @FindBy(xpath = "(//*[text()='Search Patients'])[1]")
     public WebElement searchPatient;
 
 
-    @FindBy(xpath = "//*[text()='Patient SSN:']")
+    @FindBy(xpath = "//*[text()='Patients SSN:']")
     public WebElement patientSsn;
 
     @FindBy(xpath = "//*[text()='Patients']")
@@ -43,7 +43,7 @@ public class US09_StaffPage {
 
 
 
-    @FindBy(xpath = "//*[text()='Create or edit a Patient']")
+    @FindBy(xpath = "//*[text()='Create or edit a Patients']")
     public WebElement display;
 
     @FindBy(id = "patient-id")
@@ -88,7 +88,7 @@ public class US09_StaffPage {
     @FindBy(xpath = "//*[text()='Save']")
     public WebElement save;
 
-    @FindBy(xpath = "//*[text()='Patient']")
+    @FindBy(xpath = "//*[text()='Patients']")
     public WebElement verifyPatient;
 
     @FindBy(xpath = "//input[@name='ssn']")
@@ -104,7 +104,7 @@ public class US09_StaffPage {
 
     //Admin
 
-    @FindBy(xpath = "//*[text()='Patient']")
+    @FindBy(xpath = "//*[text()='Patients']")
     public WebElement patientDropdownAdmin;
 
 

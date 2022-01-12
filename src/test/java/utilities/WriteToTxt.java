@@ -1,5 +1,11 @@
 package utilities;
+import pojos.Appointment;
+import pojos.Country;
+import pojos.Patient;
+import pojos.Registrant;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import pojos.Appointment;
 import pojos.Patient;
 import pojos.Registrant;
@@ -7,6 +13,7 @@ import pojos.Registrant;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
+
 
 public class WriteToTxt {
 
@@ -38,6 +45,35 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
+
+
+    public static void savePatientsApiData(String fileName, Patient[] patientsPojo){
+        try {
+            FileWriter fileWriter = new FileWriter(fileName, true);
+            BufferedWriter writer  = new BufferedWriter( fileWriter);
+
+            for (int i=0; i<patientsPojo.length; i++) {
+                if(patientsPojo[i].getFirstName() != null) {
+
+                    writer.append(patientsPojo[i].getCreatedBy() + "," + patientsPojo[i].getCreatedDate() + "," + patientsPojo[i].getId() + "," +
+                            patientsPojo[i].getFirstName() + "," +patientsPojo[i].getLastName() + "," +  patientsPojo[i].getBirthDate() + "," + patientsPojo[i].getPhone() + "," +
+                            patientsPojo[i].getGender() + "," + patientsPojo[i].getAdress()+ "," + patientsPojo[i].getEmail()+ "," + patientsPojo[i].getUser() + ",\n");
+
+                }else
+                {
+                    writer.append("\n");
+                }
+            }
+            writer.close();
+            Patient patients = new Patient();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+
+
     public static void saveDBUserData(String fileName, List<Object> actualData){
         try {
             FileWriter fileWriter = new FileWriter(fileName, true);
@@ -50,7 +86,12 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
-    public static void saveAppointmentData(String fileName, Appointment [] appointments){
+
+
+
+
+
+    public static void saveAppointmentData(String fileName, Appointment[] appointments){
         try {
             FileWriter fileWriter = new FileWriter(fileName, true);
             BufferedWriter writer  = new BufferedWriter( fileWriter);

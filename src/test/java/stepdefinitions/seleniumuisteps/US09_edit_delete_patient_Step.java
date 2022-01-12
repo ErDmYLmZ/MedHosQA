@@ -105,7 +105,7 @@ public class US09_edit_delete_patient_Step {
 
     @Given("user verifies display patient all information")
     public void userDisplayPatientAllInformation() {
-        Assert.assertTrue(staffPage.display.getText().contains("Create or edit a Patient"));
+        Assert.assertTrue(staffPage.display.getText().contains("Create or edit a Patients"));
     }
 
 
@@ -214,7 +214,7 @@ public class US09_edit_delete_patient_Step {
     @Then("verify successfully editing patient information")
     public void verify_successfully_editing_patient_information() {
         ReusableMethods.waitForVisibility(staffPage.verifyPatient,3);
-       Assert.assertTrue(staffPage.verifyPatient.getText().contains("Patient"));
+       Assert.assertTrue(staffPage.verifyPatient.getText().contains("Patients"));
 
 
     }
@@ -244,7 +244,7 @@ public class US09_edit_delete_patient_Step {
         public void verify_there_is_no_search_box() {
             List<WebElement> allPageObj = Driver.getDriver().findElements(By.xpath("//div[@class='jh-card card']"));
             System.out.println(ReusableMethods.getElementsText(allPageObj));
-            Assert.assertFalse(allPageObj.toString().contains("Patient SSN:"));
+            Assert.assertFalse(allPageObj.toString().contains("Patients SSN:"));
 
         }
 
