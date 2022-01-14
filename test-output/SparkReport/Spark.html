@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smoke Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 9, 2022 02:23:27 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 13, 2022 05:19:12 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,13 +66,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 9, 2022 02:23:27 AM</h3>
+<h3>Jan 13, 2022 05:19:12 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 9, 2022 02:23:41 AM</h3>
+<h3>Jan 13, 2022 05:19:24 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -123,7 +123,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>6</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -143,7 +143,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>24</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>11</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -162,7 +162,7 @@
 </div></div>
 <script>
 var timeline = {
-"Registration Password":13.833
+"Login for Doctor":10.636
 };
 </script>
 <div class="row">
@@ -173,14 +173,6 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>@UIlogin</td>
-<td>6</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@UIRegistrationPasswordNegative</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -188,8 +180,8 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@RegistrationPassword</td>
-<td>6</td>
+<td>@s2</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -223,13 +215,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 6,
+passChild: 1,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 24,
+passGrandChild: 11,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
@@ -254,7 +246,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@UIlogin</a><a class="dropdown-item" href="#">@UIRegistrationPasswordNegative</a><a class="dropdown-item" href="#">@RegistrationPassword</a>
+<a class="dropdown-item" href="#">@UIlogin</a><a class="dropdown-item" href="#">@s2</a>
 </ul>
 </li>
 </ul>
@@ -265,9 +257,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Registration Password</p>
+            <p class="name">Login for Doctor</p>
             <p class="text-sm">
-              <span>2:23:27 AM</span> / <span>00:00:13:833</span>
+              <span>5:19:14 PM</span> / <span>00:00:10:636</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -275,10 +267,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Registration Password</h5>
-<span class='badge badge-success'>01.09.2022 2:23:27 AM</span>
-<span class='badge badge-danger'>01.09.2022 2:23:41 AM</span>
-<span class='badge badge-default'>00:00:13:833</span>
+<h5 class="test-status text-pass">Login for Doctor</h5>
+<span class='badge badge-success'>01.13.2022 5:19:14 PM</span>
+<span class='badge badge-danger'>01.13.2022 5:19:24 PM</span>
+<span class='badge badge-default'>00:00:10:636</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -290,182 +282,63 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify the password is secure</div>
-      </div>
-    </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Verify the password is secure</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User goes to url</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given User navigates to Registration Page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user enters a new password as "Ab12345"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Verify the strength bar is green</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify the password is secure</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User goes to url</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given User navigates to Registration Page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user enters a new password as "aBc1234"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Verify the strength bar is green</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Verify the password is secure</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User goes to url</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given User navigates to Registration Page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user enters a new password as "Ab1cdef"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Verify the strength bar is green</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>Verify the password is secure</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User goes to url</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given User navigates to Registration Page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user enters a new password as "Ab1234."</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Verify the strength bar is green</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Verify the password is secure</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given User goes to url</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given User navigates to Registration Page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user enters a new password as "Ab12345."</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Verify the strength bar is green</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>User enters weak password</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>TC_02</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.userGoesToUrl()">
-                <span>Given User goes to url</span>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.LoginSteps.user_navigates_to_sign_in_portal()">
+                <span>And user navigates to sign in portal</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_is_on_the_registration_page()">
-                <span>Given user is on the Registration page</span>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.LoginSteps.user_clicks_on_sign_in_button()">
+                <span>And user clicks on sign in button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.user_enters_a_password_as(java.lang.String)">
-                <span>And user enters a password as "Ab123."</span>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.LoginSteps.user_provides_the_username_as(java.lang.String)">
+                <span>When user provides the username as "doctor1"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US03_RegistrationPasswordSteps.verify_verify_the_strength_bar_is_red()">
-                <span>Then Verify Verify the strength bar is red</span>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.LoginSteps.user_provides_the_password_as(java.lang.String)">
+                <span>And user provides the password as "Ab12345."</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.LoginSteps.user_clicks_on_login_button()">
+                <span>Then user clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US11_DoctorAppointmentsEdit.clicks_the_my_pages_button()">
+                <span>Given clicks the my pages button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US11_DoctorAppointmentsEdit.click_my_appointments_button()">
+                <span>And click my appointments button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US11_DoctorAppointmentsEdit.clickEditButton()">
+                <span>And click Edit button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US11_DoctorAppointmentsEdit.verifyEditPageIsOpened()">
+                <span>Then verify Edit page is opened</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US11_DoctorAppointmentsEdit.typeInFieldsAnamnesisTreatmentDiagnosis(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And Type in fields Anamnesis "past surgical history" ,Treatment "Tonsillectomy",Diagnosis "recurrent tonsillitis"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepdefinitions.seleniumuisteps.US11_DoctorAppointmentsEdit.verifyDoctorCanTypeTheFields(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then Verify doctor can type the fields "past surgical history","Tonsillectomy","recurrent tonsillitis"</span>
       <div>
       </div>
               </div>
@@ -488,107 +361,21 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>6</span>
-</span>
-<p class="name">@UIlogin</p>
-<p class="duration text-sm">6 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@UIlogin</h4>
-<span status="pass" class='badge log pass-bg'>6 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:27 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='3'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:38 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='9'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='15'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='21'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='27'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='33'>User enters weak password</a>
-<div class="">
-<span class="badge badge-default">Registration Password.User enters weak password</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@UIRegistrationPasswordNegative</p>
+<p class="name">@UIlogin</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@UIRegistrationPasswordNegative</h4>
+<h4>@UIlogin</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -602,11 +389,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:40 AM</td>
+<td>17:19:14 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='33'>User enters weak password</a>
+<a href="#" class="linked" test-id='1' id='2'>TC_02</a>
 <div class="">
-<span class="badge badge-default">Registration Password.User enters weak password</span>
+<span class="badge badge-default">Login for Doctor.TC_02</span>
 </div>
 </td>
 </tr>
@@ -617,15 +404,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>6</span>
+<span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@RegistrationPassword</p>
-<p class="duration text-sm">6 tests</p>
+<p class="name">@s2</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@RegistrationPassword</h4>
-<span status="pass" class='badge log pass-bg'>6 passed</span>
+<h4>@s2</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -638,61 +425,11 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:27 AM</td>
+<td>17:19:14 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>Verify the password is secure</a>
+<a href="#" class="linked" test-id='1' id='2'>TC_02</a>
 <div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:38 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='9'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='15'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='21'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='27'>Verify the password is secure</a>
-<div class="">
-<span class="badge badge-default">Registration Password.Verify the password is secure</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>02:23:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='33'>User enters weak password</a>
-<div class="">
-<span class="badge badge-default">Registration Password.User enters weak password</span>
+<span class="badge badge-default">Login for Doctor.TC_02</span>
 </div>
 </td>
 </tr>

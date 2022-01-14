@@ -1,15 +1,14 @@
 package stepdefinitions.seleniumuisteps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import pages.AdminPage;
-import pages.CommonPageElements;
-import pages.LoginPage;
-import pages.UserPage;
+import pages.*;
 import utilities.Driver;
 
+import java.util.List;
 
 
 public class US20_Admin_Manages_Users_Steps {
@@ -17,6 +16,7 @@ public class US20_Admin_Manages_Users_Steps {
     CommonPageElements commonPageElements = new CommonPageElements();
     UserPage userPage = new UserPage();
     AdminPage adminPage = new AdminPage();
+    UserManagementPage um = new UserManagementPage();
 
     //TC0001 Step Defs
     @Given("Admin goes to the url")
@@ -49,10 +49,18 @@ public class US20_Admin_Manages_Users_Steps {
         Driver.waitAndClick(adminPage.administrationDropdown);
         Driver.waitAndClick(adminPage.userManagement);
     }
-    @Given("Admin clicks view button of an existing user")
-    public void admin_clicks_view_button_of_an_existing_user() {
+    @And("Admin clicks view button of an existing user {string}")
+    public void adminClicksViewButtonOfAnExistingUser(String user1) {
+        //I applied the method we used to make codes dynamic
+        for (int i = 0; i < um.userNames.size(); i++){
 
-        Driver.clickWithJS(userPage.viewButton3313);
+            if (um.userNames.get(i).getText().equalsIgnoreCase(user1)) {
+                Driver.clickWithJS(um.viewButtons.get(i));
+                break;
+            }
+        }
+        //This is hard coded one
+        //Driver.clickWithJS(userPage.viewButton3313);
     }
     @Then("admin verifies registered people info as firstname, lastname, email etc.")
     public void admin_verifies_registered_people_info_as_firstname_lastname_email_etc() {
@@ -69,17 +77,27 @@ public class US20_Admin_Manages_Users_Steps {
     //TC0002 Step Defs
     @Given("Admin goes back to the Users page")
     public void admin_goes_back_to_the_users_page() {
+
         Driver.waitAndClick(userPage.backButton);
     }
 
-    @Given("Admin clicks Edit button of an existing user")
-    public void admin_clicks_edit_button_of_an_existing_user() {
-        Driver.waitAndClick(userPage.editButton3313);
+    @And("Admin clicks Edit button of an existing user {string}")
+    public void adminClicksEditButtonOfAnExistingUser(String user2) {
+        //I applied the method we used to make codes dynamic
+        for (int i = 0; i < um.userNames.size(); i++){
+
+            if (um.userNames.get(i).getText().equalsIgnoreCase(user2)) {
+                Driver.clickWithJS(um.editButtons.get(i));
+                break;
+            }
+        }
+        //This is hard coded one
+        //Driver.waitAndClick(userPage.editButton3313);
     }
     @Given("Admin edits the info, activates the account and gives role")
     public void admin_edits_the_info_activates_the_account_and_gives_role() {
         Driver.getDriver().findElement(By.id("firstName")).clear();
-        Driver.waitAndSendText(userPage.firstNameBox, "Johnny");
+        Driver.waitAndSendText(userPage.firstNameBox, "Mary");
 
         Driver.getDriver().findElement(By.id("lastName")).clear();
         Driver.waitAndSendText(userPage.lastNameBox, "Jones");
@@ -103,9 +121,19 @@ public class US20_Admin_Manages_Users_Steps {
     public void admin_is_on_the_users_page() {
         Assert.assertTrue(userPage.usersPageText.isDisplayed());
     }
-    @Given("Admin clicks delete button of an account")
-    public void admin_clicks_delete_button_of_an_account() {
-        Driver.clickWithJS(userPage.deleteButton3313);
+
+    @And("Admin clicks delete button of a user {string}")
+    public void adminClicksDeleteButtonOfAUser(String user3) {
+        //I applied the method we used to make codes dynamic
+        for (int i = 0; i < um.userNames.size(); i++){
+
+            if (um.userNames.get(i).getText().equalsIgnoreCase(user3)) {
+                Driver.clickWithJS(um.deleteButtons.get(i));
+                break;
+            }
+        }
+        //This is hard coded one
+        //Driver.clickWithJS(userPage.deleteButton3313);
     }
     @Given("Admin gets Confirm delete operation message box")
     public void admin_gets_confirm_delete_operation_message_box() {
@@ -116,7 +144,7 @@ public class US20_Admin_Manages_Users_Steps {
     }
     @Then("admin verifies the success message and gets back to Users page")
     public void admin_verifies_the_success_message_and_gets_back_to_users_page() {
-
+        //I commented out this code as I didn't want to delete a real user, hard coded here
         //Driver.waitAndClick(userPage.deleteButton15);
         //Assert.assertTrue(userPage.deleteConfirmationText.isDisplayed());
 

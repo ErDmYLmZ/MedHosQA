@@ -25,14 +25,22 @@ public class LoginPage {
 
     @FindBy(xpath="//*[text()='Did you forget your password?']")
     public WebElement updatePassword;
-
     @FindBy(xpath="//*[text()='Register a new account']")
     public WebElement proceedToRegistration;
+    @FindBy(xpath="//*[text()='Registration']")
+    public WebElement registerVerify;
 
+    @FindBy (className = "Toastify__toast-body")
 
+    public WebElement failedLogin;
 
+    @FindBy (xpath = "//*[@name='rememberMe']")
+    public WebElement rememberMeCheckValue;
+    @FindBy(xpath = "//*[@id='login-title']")
+    public  WebElement loginTitle;
 
-
+    @FindBy(xpath="//*[@id='login-title']/button")
+    public WebElement cancelButton;
 
 
 

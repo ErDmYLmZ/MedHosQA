@@ -113,6 +113,10 @@ public class US14_Inpatient_Edit_Steps {
     @Given("user clicks edit button on inpatients page after update")
     public void user_clicks_edit_button_on_inpatients_page_after_update () {
 
+        Actions actions = new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+
         for (int i=0; i<doctorPage.listOfInpatientIDs.size();i++) {
             if(doctorPage.listOfInpatientIDs.get(i).getText().equals("7201")) {
                 id = doctorPage.listOfInpatientIDs.get(i).getText();
@@ -133,8 +137,8 @@ public class US14_Inpatient_Edit_Steps {
 //        String formattedEndDate = OurMethods.formatDateToSendKeys(endDate);
 //        System.out.println("formatted end date:" + formattedEndDate);
         ReusableMethods.scrollToElement(doctorPage.endDateInpatient);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+
 //        doctorPage.endDateInpatient.sendKeys(formattedEndDate);
         doctorPage.endDateInpatient.sendKeys("31010020221652");// time is not sent. Thats why I used hard code for date
         System.out.println("end date field: " + doctorPage.endDateInpatient.getAttribute("Value"));

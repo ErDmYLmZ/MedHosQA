@@ -10,16 +10,15 @@ import java.util.List;
 
 public class DoctorPage {
 
-public DoctorPage(){
-    PageFactory.initElements(Driver.getDriver(), this);
-}
+    public DoctorPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
-@FindBy (id = "entity-menu")
-public WebElement myPagesDropdown;
+    @FindBy (id = "entity-menu")
+    public WebElement myPagesDropdown;
 
     @FindBy(xpath = "//span[.='My Inpatients']")
     public WebElement myInpatientsInDropdown;
-
 
     @FindBy(xpath = "//tr[4]/td[10]") // hardcoded olmamasi icin bunu kullanmadim
     public WebElement editButtonOfID_4901; // I get the exact id 4901
@@ -27,18 +26,22 @@ public WebElement myPagesDropdown;
     @FindBy(xpath = "//tr[4]/td[10]") // hardcoded olmamasi icin bunu kullanmadim
     public List<WebElement> stayingRowList; // I get the exact id 4901
 
-// onemli: findElements icin asagidakini kullanabiliriz!!!
+    // onemli: findElements icin asagidakini kullanabiliriz!!!
+    @FindAll({@FindBy(xpath = "//tr/td[4]")}) // driver.findElements(By.xpath="") gibi
+    public List<WebElement> statusOfInpatients ; // settar hocadan- list olarak almak icin
+
+    @FindAll({@FindBy(xpath = "//tr/td[10]")}) //
+    public List<WebElement> editOfInpatients ; // settar hocadan
+
     @FindAll({@FindBy(xpath = "//tr/td[1]")}) // id sutununun xpath i
     public List<WebElement> listOfInpatientIDs ;
+
 
     @FindAll({@FindBy(xpath = "//tr/td[2]")}) //
     public List<WebElement> startDateListInpatients;
 
     @FindAll({@FindBy(xpath = "//tr/td[3]")}) //
     public List<WebElement> endDateListInpatients;
-
-    @FindAll({@FindBy(xpath = "//tr/td[4]")}) // driver.findElements(By.xpath="") gibi
-    public List<WebElement> statusOfInpatients; // settar hocadan- list olarak almak icin
 
     @FindAll({@FindBy(xpath = "//tr/td[5]")}) //
     public List<WebElement> descriptionListInpatients ;
@@ -48,17 +51,6 @@ public WebElement myPagesDropdown;
 
     @FindAll({@FindBy(xpath = "//tr/td[7]")}) //
     public List<WebElement> roomListInpatients ;
-
-    @FindAll({@FindBy(xpath = "//tr/td[10]")}) //
-    public List<WebElement> editOfInpatients ; // settar hocadan
-
-    ;
-
-
-
-
-
-
 
 
 
@@ -169,6 +161,11 @@ public WebElement myPagesDropdown;
 
     @FindBy(xpath = "//div[contains(text(), 'A new Test is created')]")
     public WebElement successMessageForTestCreation;
+    @FindBy(xpath = "//*[@id='account-menu']/a/span")
+    public WebElement accountMenu;
+
+    @FindBy(xpath ="//*[@id='account-menu']/div/a[3]/span")
+    public WebElement signOutButton;
 
 }
 

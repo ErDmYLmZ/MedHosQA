@@ -13,16 +13,12 @@ import pages.CommonPageElements;
 import pages.LoginPage;
 import pages.PatientPage;
 import pages.US09_StaffPage;
-import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import javax.print.attribute.standard.DateTimeAtProcessing;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class US09_edit_delete_patient_Step {
 
@@ -47,18 +43,22 @@ public class US09_edit_delete_patient_Step {
     @When("user navigates to patients under MY PAGES dropdown")
     public void user_navigates_to_patients_under_my_pages_dropdown() {
         Driver.waitAndClick(staffPage.myPages);
+
         Driver.waitAndClick(staffPage.searchPatient);
 
     }
     @Then("verify the patient page")
     public void verify_the_patient_page() {
+        ReusableMethods.waitFor(1);
         Assert.assertTrue(staffPage.verifyPatientsInformation.getText().contains("Patients"));
+        System.out.println(staffPage.verifyPatientsInformation.getText());
 
 
     }
     @And("user selects a patient and clicks to view button")
     public void userSelectsAPatientAndClicksToViewButton() {
-    patientPage.viewButton.click();
+       ReusableMethods.scrollIntoViewJS(patientPage.viewButton);
+       patientPage.viewButton.click();
     }
 
     @Then("user verify all the necessary field is displayed")
@@ -75,7 +75,7 @@ public class US09_edit_delete_patient_Step {
     public void enter_a_valid_ssn_number_to_patient_ssn_box() {
         staffPage.ssnBox.clear();
         ReusableMethods.waitForPageToLoad(2);
-        staffPage.ssnBox.sendKeys("123-77-5679");
+        staffPage.ssnBox.sendKeys("564-34-2342");
 
 
 
@@ -90,7 +90,7 @@ public class US09_edit_delete_patient_Step {
         actualPageData.add("SSN, First Name, Last Name, Birth Date, Phone, Email, Gender, Blood Group, Address, Description, Create Date, User, Country, State/City");
 
         Assert.assertTrue(patientsDetailObject.toString().contains(actualPageData.toString()));
-        System.out.println(actualPageData.get(1));
+       // System.out.println(actualPageData.get(1));
 
     }
     @Then("user selects a patient and clicks to edit button")
@@ -105,7 +105,8 @@ public class US09_edit_delete_patient_Step {
 
     @Given("user verifies display patient all information")
     public void userDisplayPatientAllInformation() {
-        Assert.assertTrue(staffPage.display.getText().contains("Create or edit a Patients"));
+        ReusableMethods.waitForVisibility(staffPage.display, 2);
+        Assert.assertTrue(staffPage.display.getText().contains("Create or edit a Patient"));
     }
 
 
@@ -113,7 +114,7 @@ public class US09_edit_delete_patient_Step {
     public void user_clicks_to_firstname_box_the_system_should_allow_to_update_the_firstname() {
         staffPage.firstName.clear();
         String firstName = faker.name().firstName().toString();
-        System.out.println(firstName);
+       // System.out.println(firstName);
         staffPage.firstName.sendKeys(firstName);
 
     }
@@ -121,7 +122,7 @@ public class US09_edit_delete_patient_Step {
     public void user_clicks_to_lastname_box_the_system_should_allow_to_update_the_lastname() {
         staffPage.lastName.clear();
         String lastName = faker.name().lastName().toString();
-        System.out.println(lastName);
+       // System.out.println(lastName);
         staffPage.lastName.sendKeys(lastName);
 
     }
@@ -141,7 +142,7 @@ public class US09_edit_delete_patient_Step {
     public void user_clicks_to_email_box_the_system_should_allow_to_update_the_email() {
         staffPage.email.clear();
         String email = faker.internet().emailAddress().toString();
-        System.out.println(email);
+     //   System.out.println(email);
         staffPage.email.sendKeys(email);
 
     }
@@ -173,7 +174,7 @@ public class US09_edit_delete_patient_Step {
     public void user_clicks_to_address_box_the_system_should_allow_to_update_the_address() {
         staffPage.address.clear();
         String address = faker.address().fullAddress().toString();
-        System.out.println(address);
+      //  System.out.println(address);
         staffPage.address.sendKeys(address);
     }
     @When("user clicks to description box the system should allow to update the description")
@@ -214,7 +215,7 @@ public class US09_edit_delete_patient_Step {
     @Then("verify successfully editing patient information")
     public void verify_successfully_editing_patient_information() {
         ReusableMethods.waitForVisibility(staffPage.verifyPatient,3);
-       Assert.assertTrue(staffPage.verifyPatient.getText().contains("Patients"));
+       Assert.assertTrue(staffPage.verifyPatient.getText().contains("Patient"));
 
 
     }
@@ -227,7 +228,7 @@ public class US09_edit_delete_patient_Step {
     @Then("verify there is no delete button")
     public void verifyThereIsNoDeleteButton() {
         List<WebElement> allPageObj = Driver.getDriver().findElements(By.xpath("//div[@class='jh-card card']"));
-        System.out.println(ReusableMethods.getElementsText(allPageObj));
+      //  System.out.println(ReusableMethods.getElementsText(allPageObj));
         Assert.assertFalse(allPageObj.toString().contains("Delete"));
         Driver.closeDriver();
     }
@@ -243,19 +244,11 @@ public class US09_edit_delete_patient_Step {
         @Then("verify there is no search box")
         public void verify_there_is_no_search_box() {
             List<WebElement> allPageObj = Driver.getDriver().findElements(By.xpath("//div[@class='jh-card card']"));
-            System.out.println(ReusableMethods.getElementsText(allPageObj));
+          //  System.out.println(ReusableMethods.getElementsText(allPageObj));
             Assert.assertFalse(allPageObj.toString().contains("Patients SSN:"));
 
         }
 
-
-
-    @Given("user navigates to patients page under the Items&Titles dropdown")
-    public void user_navigates_to_patients_page_under_the_items_titles_dropdown() {
-        Driver.waitAndClick(cp.itemsAndTitles);
-        Driver.waitAndClick(staffPage.patientDropdownAdmin);
-
-    }
     @When("user selects the patient to delete and clicks on Delete button")
     public void user_selects_the_patient_to_delete_and_clicks_on_delete_button() {
         staffPage.deleteButton.click();
@@ -269,6 +262,7 @@ public class US09_edit_delete_patient_Step {
         ReusableMethods.waitFor(2);
        Assert.assertTrue(staffPage.verifyDelete.getText().contains("Confirm delete operation"));
        ReusableMethods.waitFor(2);
+       Driver.closeDriver();
     }
 
 

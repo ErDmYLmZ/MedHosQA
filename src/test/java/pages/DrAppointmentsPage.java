@@ -13,7 +13,7 @@ public class DrAppointmentsPage {
     @FindBy(xpath = "(//span[text()='Edit'])[1]")
     public WebElement EditButton;
 
-    @FindBy(xpath = "//span[text()='Create or edit a Appointment']")
+    @FindBy(xpath = "//span[text()='Create or Edit an Appointment']")
     public WebElement editPageText;
 
     @FindBy(name = "id")
@@ -66,4 +66,9 @@ public class DrAppointmentsPage {
 
 @FindBy(xpath = "//option[@value='COMPLETED']")
     public WebElement completedText;
+    @FindBy(xpath = "//*[text()='Appointments']")
+
+    public WebElement appointmentTextVerify;
+
+
 }

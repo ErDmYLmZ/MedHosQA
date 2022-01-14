@@ -11,9 +11,7 @@ import pages.LoginPage;
 import pages.StaffPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
-import java.util.Locale;
 import java.util.Random;
 
 public class StaffStepDefs {
@@ -43,13 +41,13 @@ public class StaffStepDefs {
     @Given("admin navigate page {string}")
     public void admin_navigate_page(String page) {
 
-        Driver.waitAndClick(cp.itemsAndTitles);
-        switch(page) {
-            case "staff" :
-                Driver.waitAndClick(cp.staff);
-                break;
-
-        }
+//        Driver.waitAndClick(cp.itemsAndTitles);
+//        switch(page) {
+//            case "staff" :
+//                Driver.waitAndClick(cp.staff);
+//                break;
+//
+//        }
 
     }
     @Given("admin click {string}")

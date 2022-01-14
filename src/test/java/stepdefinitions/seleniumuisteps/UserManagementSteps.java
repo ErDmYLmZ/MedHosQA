@@ -1,11 +1,13 @@
 package stepdefinitions.seleniumuisteps;
-import com.sun.tools.xjc.model.CElement;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.CommonPageElements;
 import pages.UserManagementPage;
 import utilities.Driver;
+
 import java.util.List;
+
 public class UserManagementSteps {
     CommonPageElements cp = new CommonPageElements();
     UserManagementPage um = new UserManagementPage();
@@ -23,14 +25,31 @@ public class UserManagementSteps {
 //        }
         List<String > userNames      =      Driver.returnActiveElements(cp.userNames);
         List<String > ssnIds      =      Driver.returnActiveElements(cp.userSSNs);
+
+        System.out.println(cp.paginations.size());
+
+        boolean flag = false;
+        for (int k = 2; k <cp.paginations.size()-4; k++) {
+            if(flag)
+                break;
+
+
             for (int i = 0; i < userNames.size(); i++) {
-                if (userNames.get(i).equalsIgnoreCase(userName) || ssnIds.get(i).equalsIgnoreCase(ssn) ) {
-                    
-                    Driver.clickWithJS(cp.editButtons.get(i));
+                if (userNames.get(i).equalsIgnoreCase(userName) || ssnIds.get(i).equalsIgnoreCase(ssn)) {
+
+                    Driver.waitAndClick(cp.editButtons.get(i));
+                    flag=true;
                     break;
                 }
+
             }
+
+            System.out.println(cp.paginations.get(k).getText());
+            Driver.waitAndClick(cp.paginations.get(k));
+
         }
+
+    }
     @Then("user validates current activities")
     public void user_validates_current_activities() {
     }

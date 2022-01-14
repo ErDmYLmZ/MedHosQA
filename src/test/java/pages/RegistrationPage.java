@@ -1,6 +1,5 @@
 package pages;
 
-import com.aventstack.extentreports.observer.entity.NamedAttributeTestEntity;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -41,11 +40,28 @@ public class RegistrationPage {
     @FindBy(id = "register-submit")
     public WebElement registerButton;
 
-    @FindBy(xpath = "//*[text()='Registration saved!']")
+    @FindBy(xpath = "//*[text()='Registration saved']")
     public WebElement successMessageToastContainer;
 
+    @FindBy(xpath ="//*[text()='Your SSN is invalid']")
+    public WebElement invalidFeedbackForSSN;
+
+    @FindBy(xpath ="//*[text()='Your FirstName is required.']")
+    public WebElement invalidFeedbackForFirstName;
+
+    @FindBy(xpath ="//*[text()='Your LastName is required.']")
+    public WebElement invalidFeedbackForLastName;
+
+    @FindBy(xpath ="//*[text()='This SSN has been registered for another user!']")
+    public WebElement failedMessageToastContainer;
 
 
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement userNameRequiredText;
+
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement emailRequiredText;
 
 
 

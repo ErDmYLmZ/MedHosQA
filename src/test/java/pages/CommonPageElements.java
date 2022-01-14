@@ -10,14 +10,14 @@ import java.util.List;
 
 public class CommonPageElements {
 
-    public CommonPageElements(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public CommonPageElements() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="account-menu")
+    @FindBy(id = "account-menu")
     public WebElement signInAndRegistrationPortal;
 
-    @FindBy(id="login-item")
+    @FindBy(id = "login-item")
     public WebElement signIn;
 
     @FindBy(xpath = "//a[@href='/account/register']")
@@ -26,8 +26,10 @@ public class CommonPageElements {
     @FindBy(xpath = "//*[text()='Items&Titles']")
     public WebElement titlesAllUsers;
 
+
     @FindBy(partialLinkText = "Items&Titles")
     public WebElement itemsAndTitles;
+
 
     @FindBy(partialLinkText = "Staff")
     public WebElement staff;
@@ -35,19 +37,6 @@ public class CommonPageElements {
     @FindBy(partialLinkText = "Settings")
     public WebElement settings;
 
-
-    @FindBy(xpath = "//*[contains(text(),'Password')]")
-    public WebElement Passwordbutton;
-    @FindBy(xpath = "//input[@name='currentPassword']")
-    public WebElement currentPasswordBox;
-    @FindBy(xpath = "//input[@name='newPassword']")
-    public WebElement newPasswordBox;
-    @FindBy(xpath = "//input[@name='confirmPassword']")
-    public WebElement confirmPasswordBox;
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement saveButton;
-    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
-    public WebElement ToastifyMessage;
 
 
 
@@ -78,4 +67,17 @@ public class CommonPageElements {
     public List<WebElement> userNames;
     @FindAll({@FindBy(xpath = "//tbody/tr/td[3]")})
     public List<WebElement> userSSNs;
+
+
+    @FindBy(xpath = "//span[text()='Sign out']")
+    public WebElement signOut;
+
+
+    @FindAll({@FindBy(xpath = "//a[@class='page-link']")})
+    public List<WebElement> paginations;
+
+
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    public WebElement registrationTab;
 }

@@ -25,7 +25,7 @@
       And user updates start date
       And user clicks on save button on edit inpatient page
       Then user views success message
-      And validate that the data is updated
+      And validate that start date is updated
 
     @TC004_update_enddate
       Scenario: Doctor can update enddate
@@ -51,7 +51,7 @@
       Then user views success message
       And validate that Created Date is NOT updated
 
-        @TC005_update_room
+        @TC007_update_room
         Scenario: doctor can update room
 
         Given user clicks edit button on inpatients page after update
@@ -59,32 +59,32 @@
         And user clicks on save button on edit inpatient page
         Then user views success message
         And validate that ROOM is updated
-
-#    @TC007_update_status_from_discharged
-#    Scenario: Doctor can update status from DISCHARGED to other statuses
-#      Given user clicks edit button of a DISCHARGED inpatient
-#      And user updates status
-#      And user clicks on save button on edit inpatient page
-#      Then user views success message
-#      And validate that status is updated
-
-
-#    @TC003_update_inpatient_data_invalid_data
-#    Scenario: Doctor can not update all inpatient data with invalid data?
-
-#      @TC004_update_status
-#      Scenario Outline: Doctor can update status
-#      Given user clicks edit button on inpatients page
-#      And user updates Status as "<status>"
-#      And user clicks on save button on edit inpatient page
-#      Given user clicks edit button on inpatients page
-#      And validate that Status is updated as "<status>"
+#
+##    @TC007_update_status_from_discharged
+##    Scenario: Doctor can update status from DISCHARGED to other statuses
+##      Given user clicks edit button of a DISCHARGED inpatient
+##      And user updates status
+##      And user clicks on save button on edit inpatient page
+##      Then user views success message
+##      And validate that status is updated
 #
 #
-#        Examples:
-#          | status |
-#          | UNAPPROVED |
-#          | STAYING |
-#          | DISCHARGED |
-#          | CANCELLED |
+##    @TC003_update_inpatient_data_invalid_data
+##    Scenario: Doctor can not update all inpatient data with invalid data?
+#
+##      @TC004_update_status
+##      Scenario Outline: Doctor can update status
+##      Given user clicks edit button on inpatients page
+##      And user updates Status as "<status>"
+##      And user clicks on save button on edit inpatient page
+##      Given user clicks edit button on inpatients page
+##      And validate that Status is updated as "<status>"
+##
+##
+##        Examples:
+##          | status |
+##          | UNAPPROVED |
+##          | STAYING |
+##          | DISCHARGED |
+##          | CANCELLED |
 

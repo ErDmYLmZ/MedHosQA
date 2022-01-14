@@ -5,12 +5,19 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.*;
 
 import io.restassured.response.Response;
+import org.junit.Assert;
 import pojos.Patient;
 import pojos.Patient;
 import utilities.ApiRequestsUtils;
 import utilities.ConfigReader;
+import utilities.ReadTxt;
 import utilities.WriteToTxt;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertTrue;
 import static utilities.Authentication.generateToken;
 
 
@@ -42,14 +49,18 @@ Patient [] patientsPojo;
 
     @And("user puts the patients data into correspondent files")
     public void userPutsThePatientsDataIntoCorrespondentFiles() {
-        WriteToTxt.savePatientsApiData(fileName, patientsPojo);
+   //     WriteToTxt.savePatientsApiData(fileName, patientsPojo);
     }
 
     @Then("user validates the patients")
     public void userValidatesThePatients() {
+
+
         response.then().assertThat().statusCode(200);
-        response.prettyPrint();
+       response.prettyPrint();
 
 
-    }
+
+
+}
 }

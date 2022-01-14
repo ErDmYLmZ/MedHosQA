@@ -37,7 +37,7 @@ public class US11_DoctorAppointmentsEdit {
     @Then("verify doctor should be able to see patient's id,start and end date,Status,Physician and patient")
     public void verifyDoctorShouldBeAbleToSeePatientSIdStartAndEndDateStatusPhysicianAndPatient() {
 
-        String expectedId="3414";
+        String expectedId="7106";
         String actualId=app.appointmentId.getAttribute("value").trim();
         Assert.assertTrue(expectedId.equals(actualId));// validation with patient ID
 
@@ -48,13 +48,20 @@ public class US11_DoctorAppointmentsEdit {
         Assert.assertTrue(app.physicianId.isDisplayed());
         Assert.assertTrue(app.patientId.isDisplayed());
 
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.signOut);
+//       Driver.closeDriver();
+
 
     }
 
     @And("Type in fields Anamnesis {string} ,Treatment {string},Diagnosis {string}")
     public void typeInFieldsAnamnesisTreatmentDiagnosis(String arg0, String arg1, String arg2) {
+        app.anamnesisText.clear();
         app.anamnesisText.sendKeys(arg0);
+        app.treatmentText.clear();
         app.treatmentText.sendKeys(arg1);
+        app.diagnosisText.clear();
         app.diagnosisText.sendKeys(arg2);
     }
 
@@ -65,6 +72,8 @@ public class US11_DoctorAppointmentsEdit {
         //  System.out.println(app.anamnesisText.getText());
         Assert.assertTrue(app.treatmentText.getText().equals(arg1));
         Assert.assertTrue(app.diagnosisText.getText().equals(arg2));
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.signOut);
 
     }
 
@@ -88,6 +97,8 @@ public class US11_DoctorAppointmentsEdit {
         app.errorMessage1.isDisplayed();
         app.errorMessage2.isDisplayed();
         app.errorMessage3.isDisplayed();
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.signOut);
 
     }
 
@@ -111,6 +122,8 @@ public class US11_DoctorAppointmentsEdit {
         System.out.println(alertMsg);
 
         Assert.assertTrue(alertMsg.contains("updated"));
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.signOut);
 
     }
 
@@ -130,6 +143,8 @@ public class US11_DoctorAppointmentsEdit {
         String statusText= app.completedText.getText();
         System.out.println(statusText);
         Assert.assertTrue(statusText.contains("COMPLETED"));
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.signOut);
 
     }
 
@@ -145,6 +160,8 @@ public class US11_DoctorAppointmentsEdit {
         String txt=select.getOptions().get(0).getAttribute("disabled");
         System.out.println(txt);
         Assert.assertTrue(txt.equals("true"));
+        Driver.waitAndClick(cp.signInAndRegistrationPortal);
+        Driver.waitAndClick(cp.signOut);
     }
 
     @Given("user navigates to lending page {string}")

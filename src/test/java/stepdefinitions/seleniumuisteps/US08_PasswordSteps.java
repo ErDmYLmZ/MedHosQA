@@ -17,11 +17,6 @@ public class US08_PasswordSteps {
     PasswordPage passwordPage = new PasswordPage();
 
 
-//    @Given("user is on the registration page")
-//    public void user_is_on_the_registration_page() {
-//       // Driver.getDriver().get(ConfigReader.getProperty("app_url_register"));
-//    }
-
     @When("user enters the first password as {string}")
     public void user_enters_the_first_password_as(String firstPassword) {
         registrationPage.firstPasswordTextbox.sendKeys(firstPassword);
@@ -91,57 +86,43 @@ public class US08_PasswordSteps {
                 assertTrue(barColor.contains("221"));
                 break;
         }
-//        if (firstpassword.equals("Ab12345.")) {
-//            System.out.println(barColor);
-//            Assert.assertFalse(barColor.contains("153"));
-//
-//        }else if (firstpassword.equals("Ab12345")){
-//            ReusableMethods.waitForVisibility(registrationPage.strengthBar, 2);
-//            System.out.println(barColor);
-//            Assert.assertTrue(barColor.contains("221"));
-//        }else {
-//            ReusableMethods.waitForVisibility(registrationPage.strengthBar, 2);
-//            System.out.println(barColor);
-//            Assert.assertTrue(barColor.contains("221"));
-//        }
     }
 
     @Then("user navigates to password")
     public void userNavigatesToPassword() {
         Driver.waitAndClick(cp.signInAndRegistrationPortal);
-        Driver.waitAndClick(cp.Passwordbutton);
+        Driver.waitAndClick(passwordPage.Passwordbutton);
     }
 
     @And("User enters current password as {string}")
     public void userEntersCurrentPasswordAs(String password) {
-        Driver.waitAndSendText(cp.currentPasswordBox, password);
+        Driver.waitAndSendText(passwordPage.currentPasswordBox, password);
 
     }
 
     @And("User enters New password as the same {string}")
     public void userEntersNewPasswordAsTheSame(String password) {
-        Driver.waitAndSendText(cp.newPasswordBox, password);
+        Driver.waitAndSendText(passwordPage.newPasswordBox, password);
 
     }
 
     @And("User enters New password confirmation as the same {string}")
     public void userEntersNewPasswordConfirmationAsTheSame(String password) {
-        Driver.waitAndSendText(cp.confirmPasswordBox, password);
+        Driver.waitAndSendText(passwordPage.confirmPasswordBox, password);
     }
 
     @And("User clicks on Save button")
     public void userClicksOnSaveButton() {
-        Driver.waitAndClick(cp.saveButton);
+        Driver.waitAndClick(passwordPage.saveButton);
 
     }
 
     @Then("verify the error message is displayed")
     public void verifyTheErrorMessageIsDisplayed() {
-        Driver.waitAndClick(cp.ToastifyMessage);
-        String ToastifyMessage =cp.ToastifyMessage.getText();
+        Driver.waitAndClick(passwordPage.ToastifyMessage);
+        String ToastifyMessage =passwordPage.ToastifyMessage.getText();
         assertNotEquals("Old password should not be accepted",ToastifyMessage,"Password changed!");
                 System.out.println(ToastifyMessage);
-        System.out.println("Silinecek");
-        System.out.println("Silinecek2");
+
     }
 }

@@ -44,6 +44,12 @@ public class MakeAnAppointmentPage {
     @FindBy(id = "appointment-heading")
     public WebElement appointmentsDisplayed;
 
+    @FindBy(name = "password")
+    public WebElement passwordSignInButton;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement signInButton;
+
 
 
 

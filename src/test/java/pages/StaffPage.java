@@ -65,6 +65,22 @@ public class StaffPage {
     @FindBy(id = "staff-user")
     public WebElement userDropbox;
 
+    @FindBy (xpath =" //*[contains(text(),'MY PAGES')]")
+    public  WebElement staffMyPage;
+    @FindBy (xpath = " //*[contains(text(),'Search Patient')]")
+    public WebElement staffSearchPatient;
+
+    @FindBy (xpath =" //*[@name='ssn']")
+    public WebElement ssnInputBox;
+
+    @FindBy(xpath = "//*[text()='Edit']")
+
+    public WebElement editButton;
+
+    @FindBy(xpath = "//*[@id='patient-firstName']")
+    public WebElement patientFirstName;
+    @FindBy(xpath = "//*[@id='patient-lastName']")
+    public WebElement patientLastName;
 
 
 

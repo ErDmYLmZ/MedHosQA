@@ -113,7 +113,13 @@ public abstract class Driver {
             }
         }
     }
-
+    public static List<String> returnActiveElements(List<WebElement> elements){
+        List<String> activeElements = new ArrayList<>();
+        for (int i = 0; i < elements.size(); i++) {
+            activeElements.add(elements.get(i).getText());
+        }
+        return activeElements;
+    }
     public static String waitAndGetText(WebElement element, int timeout) {
         String text="";
         for (int i = 0; i < timeout; i++) {
@@ -126,7 +132,15 @@ public abstract class Driver {
         }
         return null;
     }
-
+//
+//
+//    public static List<String> returnActiveElements(List<WebElement> elements){
+//        List<String> activeElements = new ArrayList<>();
+//        for (int i = 0; i < elements.size(); i++) {
+//            activeElements.add(elements.get(i).getText());
+//        }
+//        return activeElements;
+//    }
 
     //Webdriver
     //ChromeDriver
@@ -302,14 +316,6 @@ public abstract class Driver {
 
     public static void navigateToUrl(String url){
         Driver.getDriver().get(url);
-    }
-
-    public static List<String> returnActiveElements(List<WebElement> elements){
-        List<String> activeElements = new ArrayList<>();
-        for (int i = 0; i < elements.size(); i++) {
-            activeElements.add(elements.get(i).getText());
-        }
-        return activeElements;
     }
 
 }

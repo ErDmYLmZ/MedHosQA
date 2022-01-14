@@ -3,9 +3,9 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utilities.ConfigReader;
-import utilities.DBUtils;
 import utilities.DatabaseUtility;
 import utilities.Driver;
+
 import java.io.IOException;
 import static base_url_setup.MedunnaBaseUrl.medunnaSetup;
 public class Hooks {

@@ -36,7 +36,7 @@ public class AdminPage {
     @FindBy(xpath = "//*[text()='Items&Titles']")
     public WebElement titlesDropdown;
 
-    @FindBy(xpath = "//*[text()='Patients']")
+    @FindBy(xpath = "//*[text()='Patient']")
     public WebElement patient;
 
     @FindBy(xpath = "//*[text()='Staff']")
@@ -62,5 +62,10 @@ public class AdminPage {
 
     @FindBy(xpath = "//*[text()='Messages']")
     public WebElement messages;
+    @FindBy (xpath = "//*[@id='account-menu']/a/span")
+    public WebElement accountMenu;
+    @FindBy (xpath = "//*[@id='account-menu']/div/a[3]")
+    public WebElement signOut;
+
 
 }

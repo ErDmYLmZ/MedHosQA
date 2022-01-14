@@ -1,9 +1,11 @@
+@us11
+@UIlogin
 Feature: Login for Doctor
 
 
   Background:
 
-    Given user navigates to lending page "https://medunna.com"
+#    Given user navigates to lending page "https://medunna.com" used hooks class for lending page
     And user navigates to sign in portal
     And user clicks on sign in button
     When user provides the username as "doctor1"
@@ -19,15 +21,13 @@ Feature: Login for Doctor
     Then verify doctor should be able to see patient's id,start and end date,Status,Physician and patient
 
 
-  Scenario Outline: TC_02 positive test
+    @s2
+  Scenario:TC_02
 
-    And Type in fields Anamnesis "<s1>" ,Treatment "<t1>",Diagnosis "<d1>"
-    Then Verify doctor can type the fields "<s1>","<t1>","<d1>"
+    And Type in fields Anamnesis "past surgical history" ,Treatment "Tonsillectomy",Diagnosis "recurrent tonsillitis"
+    Then Verify doctor can type the fields "past surgical history","Tonsillectomy","recurrent tonsillitis"
 
 
-    Examples:
-      | s1                    | t1            | d1                    |
-      | past surgical history | Tonsillectomy | recurrent tonsillitis |
 
 
   Scenario: TC03_negative
