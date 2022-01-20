@@ -38,13 +38,14 @@ Patient [] patientsPojo;
     @And("user sends the get request for patients and gets the response")
     public void userSendsTheGetRequestForPatientsAndGetsTheResponse() {
         response = ApiRequestsUtils.getRequest(token,  endPoint);
-        response.prettyPrint();
+       // response.prettyPrint();
     }
 
     @When("user deserializes the patient data")
     public void userDeserializesThePatientData() throws JsonProcessingException {
         ObjectMapper obj = new ObjectMapper();
        patientsPojo = obj.readValue(response.asString(),Patient[].class);
+        System.out.println("Qqqqqqqqqqqqqqq"+patientsPojo[1].getId());
     }
 
     @And("user puts the patients data into correspondent files")
@@ -57,7 +58,7 @@ Patient [] patientsPojo;
 
 
         response.then().assertThat().statusCode(200);
-       response.prettyPrint();
+       //response.prettyPrint();
 
 
 
